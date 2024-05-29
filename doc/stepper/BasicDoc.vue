@@ -6,7 +6,39 @@
         </p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Stepper>
+        <Stepper v-model:value="value" class="basis-[50rem]">
+            <StepList>
+                <Step value="0">Header I</Step>
+                <Step value="1">Header II</Step>
+                <Step value="2">Header III</Step>
+            </StepList>
+            <StepPanels>
+                <StepPanel v-slot="{ clickCallback }" value="0">
+                    <div class="flex flex-col h-48">
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content I</div>
+                    </div>
+                    <div class="flex pt-6 justify-end"><Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback('1')" /></div>
+                </StepPanel>
+                <StepPanel v-slot="{ clickCallback }" value="1">
+                    <div class="flex flex-col h-48">
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
+                    </div>
+                    <div class="flex pt-6 justify-between">
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('0')" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback('2')" />
+                    </div>
+                </StepPanel>
+                <StepPanel v-slot="{ clickCallback }" value="2">
+                    <div class="flex flex-col h-48">
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
+                    </div>
+                    <div class="flex pt-6 justify-start">
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('1')" />
+                    </div>
+                </StepPanel>
+            </StepPanels>
+        </Stepper>
+        <!-- <Stepper>
             <StepperPanel header="Header I">
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col h-48">
@@ -38,7 +70,7 @@
                     </div>
                 </template>
             </StepperPanel>
-        </Stepper>
+        </Stepper> -->
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -47,6 +79,7 @@
 export default {
     data() {
         return {
+            value: '0',
             code: {
                 basic: `
 <Stepper>
@@ -178,9 +211,3 @@ export default {
     }
 };
 </script>
-
-<style scoped>
-.p-stepper {
-    flex-basis: 50rem;
-}
-</style>

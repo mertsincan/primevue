@@ -60,7 +60,11 @@ const panel = [
     'Tab',
     'TabPanels',
     'TabPanel',
-    'Toolbar'
+    'Toolbar',
+    'StepList',
+    'Step',
+    'StepPanels',
+    'StepPanel'
 ];
 
 const overlay = [

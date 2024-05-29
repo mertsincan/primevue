@@ -126,7 +126,11 @@ const STYLE_ALIAS = {
     'primevue/tree/style': path.resolve(__dirname, './components/lib/tree/style/TreeStyle.js'),
     'primevue/treeselect/style': path.resolve(__dirname, './components/lib/treeselect/style/TreeSelectStyle.js'),
     'primevue/treetable/style': path.resolve(__dirname, './components/lib/treetable/style/TreeTableStyle.js'),
-    'primevue/virtualscroller/style': path.resolve(__dirname, './components/lib/virtualscroller/style/VirtualScrollerStyle.js')
+    'primevue/virtualscroller/style': path.resolve(__dirname, './components/lib/virtualscroller/style/VirtualScrollerStyle.js'),
+    'primevue/steplist/style': path.resolve(__dirname, './components/lib/steplist/style/StepListStyle.js'),
+    'primevue/step/style': path.resolve(__dirname, './components/lib/step/style/StepStyle.js'),
+    'primevue/steppanels/style': path.resolve(__dirname, './components/lib/steppanels/style/StepPanelsStyle.js'),
+    'primevue/steppanel/style': path.resolve(__dirname, './components/lib/steppanel/style/StepPanelStyle.js')
 };
 
 const ICON_ALIAS = {
