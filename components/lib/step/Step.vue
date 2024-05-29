@@ -1,8 +1,8 @@
 <template>
-    <div :class="cx('root')" role="presentation" v-bind="ptm('root')">
-        <button :class="cx('header')" role="tab" @click="onStepClick">
-            <span :class="cx('number')">{{ activeValue }}</span>
-            <span :class="cx('title')">
+    <div :class="cx('root')" role="presentation" :data-p-active="isStepActive()" v-bind="ptmi('root')">
+        <button :id="id" :class="cx('header')" role="tab" type="button" :aria-controls="ariaControls" @click="onStepClick" v-bind="ptm('header')">
+            <span :class="cx('number')" v-bind="ptm('number')">{{ activeValue }}</span>
+            <span :class="cx('title')" v-bind="ptm('title')">
                 <slot />
             </span>
         </button>
@@ -51,6 +51,12 @@ export default {
     computed: {
         activeValue() {
             return !!this.$pcStepItem ? this.$pcStepItem?.value : this.value;
+        },
+        id() {
+            return `${this.$pcStepper?.id}_step_${this.activeValue}`;
+        },
+        ariaControls() {
+            return `${this.$pcStepper?.id}_steppanel_${this.activeValue}`;
         }
     },
     components: {

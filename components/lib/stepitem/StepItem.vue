@@ -1,5 +1,5 @@
 <template>
-    <div :class="cx('root')" v-bind="ptmi('root')">
+    <div :class="cx('root')" :data-p-active="isActive" v-bind="ptmi('root')">
         <slot />
     </div>
 </template>
@@ -15,7 +15,7 @@ export default {
     inject: ['$pcStepper'],
     computed: {
         isActive() {
-            return ObjectUtils.equals(this.$pcStepper?.d_value, this.value);
+            return this.$pcStepper?.d_value === this.value;
         }
     }
 };

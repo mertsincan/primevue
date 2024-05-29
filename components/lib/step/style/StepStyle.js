@@ -1,11 +1,11 @@
 import BaseStyle from 'primevue/base/style';
 
 const classes = {
-    root: ({ instance }) => [
+    root: ({ instance, props }) => [
         'p-step',
         {
             'p-step-active': instance.isStepActive(),
-            'p-disabled': instance.isStepDisabled()
+            'p-disabled': instance.isStepDisabled() || props.disabled
         }
     ],
     header: 'p-step-header',

@@ -9,6 +9,10 @@ export default {
         value: {
             type: String,
             default: undefined
+        },
+        disabled: {
+            type: Boolean,
+            default: false
         }
     },
     style: StepStyle,
