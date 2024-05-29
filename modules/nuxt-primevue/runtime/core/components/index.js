@@ -64,7 +64,8 @@ const panel = [
     'StepList',
     'Step',
     'StepPanels',
-    'StepPanel'
+    'StepPanel',
+    'StepItem'
 ];
 
 const overlay = [

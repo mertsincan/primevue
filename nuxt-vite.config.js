@@ -130,7 +130,8 @@ const STYLE_ALIAS = {
     'primevue/steplist/style': path.resolve(__dirname, './components/lib/steplist/style/StepListStyle.js'),
     'primevue/step/style': path.resolve(__dirname, './components/lib/step/style/StepStyle.js'),
     'primevue/steppanels/style': path.resolve(__dirname, './components/lib/steppanels/style/StepPanelsStyle.js'),
-    'primevue/steppanel/style': path.resolve(__dirname, './components/lib/steppanel/style/StepPanelStyle.js')
+    'primevue/steppanel/style': path.resolve(__dirname, './components/lib/steppanel/style/StepPanelStyle.js'),
+    'primevue/stepitem/style': path.resolve(__dirname, './components/lib/stepitem/style/StepItemStyle.js')
 };
 
 const ICON_ALIAS = {

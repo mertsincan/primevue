@@ -59,7 +59,7 @@ export default {
             vertical: {
                 padding: '0 0 0 1rem',
                 last: {
-                    padding: '0 0 0 3rem'
+                    padding: '0 0 0 2rem'
                 }
             }
         }

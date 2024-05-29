@@ -135,6 +135,52 @@ const theme = ({ dt }) => `
     background: ${dt('stepper.panel.content.background')};
     color: ${dt('stepper.panel.content.color')};
 }
+
+.p-stepper:has(.p-stepitem) {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-stepitem {
+    display: flex;
+    flex-direction: column;
+    flex: initial;
+}
+
+.p-stepitem.p-stepitem-active {
+    flex: 1 1 auto;
+}
+
+.p-stepitem .p-step {
+    flex: initial;
+}
+
+.p-stepitem .p-steppanel-content {
+    width: 100%;
+    padding: ${dt('stepper.panel.content.orientation.vertical.padding')};
+}
+
+.p-stepitem .p-steppanel {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.p-stepitem .p-stepper-separator {
+    flex: 0 0 auto;
+    width: ${dt('stepper.separator.size')};
+    height: auto;
+    margin: ${dt('stepper.separator.orientation.vertical.margin')};
+    position: relative;
+    left: calc(-1 * ${dt('stepper.separator.size')});
+}
+
+.p-stepitem:has(~ .p-stepitem-active) .p-stepper-separator {
+    background: ${dt('stepper.connector.active.background')};
+}
+
+.p-stepitem:last-of-type .p-steppanel {
+    padding: ${dt('stepper.panel.content.orientation.vertical.last.padding')};
+}
 `;
 
 // const x = `

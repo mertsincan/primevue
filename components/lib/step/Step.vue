@@ -1,7 +1,7 @@
 <template>
     <div :class="cx('root')" role="presentation" v-bind="ptm('root')">
-        <button :class="cx('header')" role="tab" @click="onStepClick($event, index)">
-            <span :class="cx('number')">{{ value }}</span>
+        <button :class="cx('header')" role="tab" @click="onStepClick">
+            <span :class="cx('number')">{{ activeValue }}</span>
             <span :class="cx('title')">
                 <slot />
             </span>
@@ -12,8 +12,8 @@
 
 <script>
 import { DomHandler, ObjectUtils } from 'primevue/utils';
-import BaseStep from './BaseStep.vue';
 import StepperSeparator from '../stepper/StepperSeparator.vue';
+import BaseStep from './BaseStep.vue';
 
 export default {
     name: 'Step',
@@ -21,7 +21,8 @@ export default {
     inheritAttrs: false,
     inject: {
         $pcStepper: { default: null },
-        $pcStepList: { default: null }
+        $pcStepList: { default: null },
+        $pcStepItem: { default: null }
     },
     data() {
         return {
@@ -29,22 +30,27 @@ export default {
         };
     },
     mounted() {
-        if (this.$el) {
+        if (this.$el && this.$pcStepList) {
             let index = ObjectUtils.findIndexInList(this.$el, DomHandler.find(this.$pcStepper.$el, '[data-pc-name="step"]'));
             let stepLen = DomHandler.find(this.$pcStepper.$el, '[data-pc-name="step"]').length;
 
-            this.isSeparatorVisible = index !== stepLen - 1 && ObjectUtils.isNotEmpty(this.$pcStepList);
+            this.isSeparatorVisible = index !== stepLen - 1;
         }
     },
     methods: {
         isStepActive() {
-            return this.$pcStepper.isStepActive(this.value);
+            return this.$pcStepper.isStepActive(this.activeValue);
         },
         isStepDisabled() {
             return this.$pcStepper.isStepDisabled();
         },
         onStepClick() {
-            this.$pcStepper.updateValue(this.value);
+            this.$pcStepper.updateValue(this.activeValue);
+        }
+    },
+    computed: {
+        activeValue() {
+            return !!this.$pcStepItem ? this.$pcStepItem?.value : this.value;
         }
     },
     components: {

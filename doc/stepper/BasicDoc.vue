@@ -5,6 +5,44 @@
             <i>nextCallback</i> events should be bound to your custom UI elements.
         </p>
     </DocSectionText>
+    <div class="card">
+        <Stepper v-model:value="value">
+            <StepItem value="0">
+                <Step>Header I</Step>
+                <StepPanel v-slot="{ clickCallback }">
+                    <div class="flex flex-col h-48">
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content I</div>
+                    </div>
+                    <div class="flex py-6">
+                        <Button label="Next" @click="clickCallback('1')" />
+                    </div>
+                </StepPanel>
+            </StepItem>
+            <StepItem value="1">
+                <Step>Header II</Step>
+                <StepPanel v-slot="{ clickCallback }">
+                    <div class="flex flex-col h-48">
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
+                    </div>
+                    <div class="flex py-6 gap-2">
+                        <Button label="Back" severity="secondary" @click="clickCallback('0')" />
+                        <Button label="Next" @click="clickCallback('2')" />
+                    </div>
+                </StepPanel>
+            </StepItem>
+            <StepItem value="2">
+                <Step>Header II</Step>
+                <StepPanel v-slot="{ clickCallback }">
+                    <div class="flex flex-col h-48">
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
+                    </div>
+                    <div class="flex py-6">
+                        <Button label="Back" severity="secondary" @click="clickCallback('1')" />
+                    </div>
+                </StepPanel>
+            </StepItem>
+        </Stepper>
+    </div>
     <div class="card flex justify-center">
         <Stepper v-model:value="value" class="basis-[50rem]">
             <StepList>
@@ -38,6 +76,7 @@
                 </StepPanel>
             </StepPanels>
         </Stepper>
+
         <!-- <Stepper>
             <StepperPanel header="Header I">
                 <template #content="{ nextCallback }">
