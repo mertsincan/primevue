@@ -9,6 +9,14 @@ export default {
         value: {
             type: String,
             default: undefined
+        },
+        asChild: {
+            type: Boolean,
+            default: false
+        },
+        as: {
+            type: String,
+            default: 'DIV'
         }
     },
     style: StepPanelStyle,

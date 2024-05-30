@@ -1,13 +1,12 @@
 <template>
-    <div :class="cx('root')" role="presentation" :data-p-active="isStepActive()" v-bind="ptmi('root')">
-        <button :id="id" :class="cx('header')" role="tab" type="button" :aria-controls="ariaControls" @click="onStepClick" v-bind="ptm('header')">
-            <span :class="cx('number')" v-bind="ptm('number')">{{ activeValue }}</span>
-            <span :class="cx('title')" v-bind="ptm('title')">
-                <slot />
-            </span>
+    <component v-if="!asChild" :is="as" :class="cx('root')" :aria-current="active ? 'step' : undefined" role="presentation" :data-p-active="active" :data-p-disabled="disabled" v-bind="getPTOptions('root')">
+        <button :id="id" :class="cx('header')" role="tab" type="button" :aria-controls="ariaControls" :disabled="disabled" @click="onStepClick" v-bind="getPTOptions('header')">
+            <span :class="cx('number')" v-bind="getPTOptions('number')">{{ activeValue }}</span>
+            <span :class="cx('title')" v-bind="getPTOptions('title')"> <slot /> </span>
         </button>
         <StepperSeparator v-if="isSeparatorVisible" />
-    </div>
+    </component>
+    <slot v-else :class="cx('root')" :active="active" :a11yAttrs="a11yAttrs" :onClick="onStepClick" />
 </template>
 
 <script>
@@ -38,8 +37,15 @@ export default {
         }
     },
     methods: {
-        isStepActive() {
-            return this.$pcStepper.isStepActive(this.activeValue);
+        getPTOptions(key) {
+            const _ptm = key === 'root' ? this.ptmi : this.ptm;
+
+            return _ptm(key, {
+                context: {
+                    active: this.active,
+                    disabled: this.disabled
+                }
+            });
         },
         isStepDisabled() {
             return this.$pcStepper.isStepDisabled();
@@ -49,6 +55,9 @@ export default {
         }
     },
     computed: {
+        active() {
+            return this.$pcStepper.isStepActive(this.activeValue);
+        },
         activeValue() {
             return !!this.$pcStepItem ? this.$pcStepItem?.value : this.value;
         },
@@ -57,6 +66,25 @@ export default {
         },
         ariaControls() {
             return `${this.$pcStepper?.id}_steppanel_${this.activeValue}`;
+        },
+        a11yAttrs() {
+            return {
+                root: {
+                    role: 'presentation',
+                    'aria-current': this.active ? 'step' : undefined,
+                    'data-pc-name': 'step',
+                    'data-p-disabled': this.disabled,
+                    'data-p-active': this.active
+                },
+                header: {
+                    id: this.id,
+                    role: 'tab',
+                    'aria-controls': this.ariaControls,
+                    'data-pc-section': 'header',
+                    disabled: this.disabled,
+                    onClick: this.onStepClick
+                }
+            };
         }
     },
     components: {

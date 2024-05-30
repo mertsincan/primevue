@@ -13,6 +13,14 @@ export default {
         disabled: {
             type: Boolean,
             default: false
+        },
+        asChild: {
+            type: Boolean,
+            default: false
+        },
+        as: {
+            type: String,
+            default: 'DIV'
         }
     },
     style: StepStyle,

@@ -4,7 +4,7 @@ const classes = {
     root: ({ instance, props }) => [
         'p-step',
         {
-            'p-step-active': instance.isStepActive(),
+            'p-step-active': instance.active,
             'p-disabled': instance.isStepDisabled() || props.disabled
         }
     ],

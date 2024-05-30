@@ -1,18 +1,24 @@
 <template>
     <template v-if="isVertical">
-        <transition name="p-toggleable-content" v-bind="ptm('transition')">
-            <div v-show="isActive" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="ptmi('root')">
-                <StepperSeparator v-if="isSeparatorVisible" />
-                <div :class="cx('content')" v-bind="ptm('content')">
-                    <slot :clickCallback="(val) => updateValue(val)" />
-                </div>
-            </div>
-        </transition>
+        <template v-if="!asChild">
+            <transition name="p-toggleable-content" v-bind="ptm('transition')">
+                <component v-show="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="ptmi('root')">
+                    <StepperSeparator v-if="isSeparatorVisible" />
+                    <div :class="cx('content')" v-bind="ptm('content')">
+                        <slot :active="active" :clickCallback="(val) => updateValue(val)" />
+                    </div>
+                </component>
+            </transition>
+        </template>
+        <slot v-else :active="active" :clickCallback="(val) => updateValue(val)" />
     </template>
     <template v-else>
-        <div v-if="isActive" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="ptmi('root')">
-            <slot :clickCallback="(val) => updateValue(val)" />
-        </div>
+        <template v-if="!asChild">
+            <component v-if="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="ptmi('root')">
+                <slot :active="active" :clickCallback="(val) => updateValue(val)" />
+            </component>
+        </template>
+        <slot v-else :active="active" :clickCallback="(val) => updateValue(val)" />
     </template>
 </template>
 
@@ -50,10 +56,12 @@ export default {
         }
     },
     computed: {
-        isActive() {
+        active() {
             let activeValue = !!this.$pcStepItem ? this.$pcStepItem?.value : this.value;
 
-            return ObjectUtils.equals(activeValue, this.$pcStepper?.d_value);
+            console.log(this.value);
+
+            return activeValue === this.$pcStepper?.d_value;
         },
         isVertical() {
             return !!this.$pcStepItem;
