@@ -1,8 +1,10 @@
 <template>
     <component v-if="!asChild" :is="as" :class="cx('root')" :aria-current="active ? 'step' : undefined" role="presentation" :data-p-active="active" :data-p-disabled="disabled" v-bind="getPTOptions('root')">
-        <button :id="id" :class="cx('header')" role="tab" type="button" :aria-controls="ariaControls" :disabled="disabled" @click="onStepClick" v-bind="getPTOptions('header')">
+        <button :id="id" :class="cx('header')" role="tab" type="button" :tabindex="disabled ? -1 : undefined" :aria-controls="ariaControls" :disabled="disabled" @click="onStepClick" v-bind="getPTOptions('header')">
             <span :class="cx('number')" v-bind="getPTOptions('number')">{{ activeValue }}</span>
-            <span :class="cx('title')" v-bind="getPTOptions('title')"> <slot /> </span>
+            <span :class="cx('title')" v-bind="getPTOptions('title')">
+                <slot />
+            </span>
         </button>
         <StepperSeparator v-if="isSeparatorVisible" />
     </component>
@@ -73,12 +75,14 @@ export default {
                     role: 'presentation',
                     'aria-current': this.active ? 'step' : undefined,
                     'data-pc-name': 'step',
+                    'data-pc-section': 'root',
                     'data-p-disabled': this.disabled,
                     'data-p-active': this.active
                 },
                 header: {
                     id: this.id,
                     role: 'tab',
+                    taindex: this.disabled ? -1 : undefined,
                     'aria-controls': this.ariaControls,
                     'data-pc-section': 'header',
                     disabled: this.disabled,

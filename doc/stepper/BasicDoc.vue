@@ -8,7 +8,13 @@
     <div class="card">
         <Stepper v-model:value="value">
             <StepItem value="1">
-                <Step>Header I</Step>
+                <Step v-slot="slotProps" asChild>
+                    <div :class="['flex items-center gap-2', slotProps.class]" @click="slotProps.onClick" v-bind="slotProps.a11yAttrs.root">
+                        <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/ionibowcher.png" shape="circle" />
+                        <span class="font-bold whitespace-nowrap" v-bind="slotProps.a11yAttrs.header">Ioni Bowcher</span>
+                        <Badge value="2" />
+                    </div>
+                </Step>
                 <StepPanel v-slot="{ active, clickCallback }" asChild>
                     <transition name="p-toggleable-content">
                         <div v-show="active">
@@ -55,7 +61,6 @@
                 <Step value="3">Header III</Step>
             </StepList>
             <StepPanels>
-                {{ value }}
                 <StepPanel v-slot="slotProps" asChild value="1">
                     <div v-show="slotProps.active">
                         <div class="flex flex-col h-48">

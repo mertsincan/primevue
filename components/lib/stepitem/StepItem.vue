@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { ObjectUtils } from 'primevue/utils';
 import BaseStepItem from './BaseStepItem.vue';
 
 export default {

@@ -9,6 +9,11 @@
  */
 import { BaseStyle } from '../../base/style';
 
-export enum StepPanelsClasses {}
+export enum StepPanelsClasses {
+    /**
+     * Class name of the root element
+     */
+    root = 'p-steppanels'
+}
 
 export interface StepPanelsStyle extends BaseStyle {}

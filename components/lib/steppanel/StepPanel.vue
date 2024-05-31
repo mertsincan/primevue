@@ -2,23 +2,23 @@
     <template v-if="isVertical">
         <template v-if="!asChild">
             <transition name="p-toggleable-content" v-bind="ptm('transition')">
-                <component v-show="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="ptmi('root')">
+                <component v-show="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="getPTOptions('root')">
                     <StepperSeparator v-if="isSeparatorVisible" />
-                    <div :class="cx('content')" v-bind="ptm('content')">
-                        <slot :active="active" :clickCallback="(val) => updateValue(val)" />
+                    <div :class="cx('content')" v-bind="getPTOptions('content')">
+                        <slot />
                     </div>
                 </component>
             </transition>
         </template>
-        <slot v-else :active="active" :clickCallback="(val) => updateValue(val)" />
+        <slot v-else :active="active" :a11yAttrs="a11yAttrs" :clickCallback="(val) => updateValue(val)" />
     </template>
     <template v-else>
         <template v-if="!asChild">
-            <component v-if="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="ptmi('root')">
-                <slot :active="active" :clickCallback="(val) => updateValue(val)" />
+            <component v-if="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="getPTOptions('root')">
+                <slot :active="active" />
             </component>
         </template>
-        <slot v-else :active="active" :clickCallback="(val) => updateValue(val)" />
+        <slot v-else :active="active" :a11yAttrs="a11yAttrs" :clickCallback="(val) => updateValue(val)" />
     </template>
 </template>
 
@@ -51,6 +51,15 @@ export default {
         }
     },
     methods: {
+        getPTOptions(key) {
+            const _ptm = key === 'root' ? this.ptmi : this.ptm;
+
+            return _ptm(key, {
+                context: {
+                    active: this.active
+                }
+            });
+        },
         updateValue(val) {
             this.$pcStepper.updateValue(val);
         }
@@ -59,21 +68,28 @@ export default {
         active() {
             let activeValue = !!this.$pcStepItem ? this.$pcStepItem?.value : this.value;
 
-            console.log(this.value);
-
             return activeValue === this.$pcStepper?.d_value;
         },
         isVertical() {
             return !!this.$pcStepItem;
         },
         activeValue() {
-            return !!this.$pcStepItem ? this.$pcStepItem?.value : this.value;
+            return this.isVertical ? this.$pcStepItem?.value : this.value;
         },
         id() {
             return `${this.$pcStepper?.id}_steppanel_${this.activeValue}`;
         },
         ariaControls() {
             return `${this.$pcStepper?.id}_step_${this.activeValue}`;
+        },
+        a11yAttrs() {
+            return {
+                id: this.id,
+                role: 'tabpanel',
+                'aria-controls': this.ariaControls,
+                'data-pc-name': 'steppanel',
+                'data-p-active': this.active
+            };
         }
     },
     components: {

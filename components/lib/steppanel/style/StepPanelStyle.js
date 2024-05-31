@@ -1,7 +1,12 @@
 import BaseStyle from 'primevue/base/style';
 
 const classes = {
-    root: 'p-steppanel',
+    root: ({ instance }) => [
+        'p-steppanel',
+        {
+            'p-steppanel-active': instance.isVertical && instance.active
+        }
+    ],
     content: 'p-steppanel-content'
 };
 
