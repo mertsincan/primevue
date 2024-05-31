@@ -14,7 +14,8 @@ export default {
 npm install -g primeclt
 `
             }
-        };a
+        };
+        a;
     }
 };
 </script>

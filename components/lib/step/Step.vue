@@ -8,7 +8,7 @@
         </button>
         <StepperSeparator v-if="isSeparatorVisible" />
     </component>
-    <slot v-else :class="cx('root')" :active="active" :a11yAttrs="a11yAttrs" :onClick="onStepClick" />
+    <slot v-else :class="cx('root')" :active="active" :value="value" :a11yAttrs="a11yAttrs" :clickCallback="onStepClick" />
 </template>
 
 <script>
