@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Stepper provides various templating options to customize the default UI design.</p>
+        <p>Custom content for a tab is defined using <i>as</i> or <i>asChild</i> properties.</p>
     </DocSectionText>
     <div class="card flex justify-center">
         <Stepper v-model:value="activeStep" class="basis-[40rem]">
