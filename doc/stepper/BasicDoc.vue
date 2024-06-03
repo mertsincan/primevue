@@ -1,9 +1,8 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>
-            Stepper consists of one or more StepperPanel elements to encapsulate each step in the progress. The elements to navigate between the steps are not built-in for ease of customization, instead
-            <i>clickCallback</i> events should be bound to your custom UI elements.
-        </p>
+        <DocSectionText v-bind="$attrs">
+            <p>Stepepr comprises a combination of <i>StepList</i>, <i>Step</i>, <i>StepPanels</i> and <i>StepPanel</i> components. The <i>value</i> property is essential for associating Step and StepPanel with each other.</p>
+        </DocSectionText>
     </DocSectionText>
     <div class="card flex justify-center">
         <Stepper value="1" class="basis-[50rem]">

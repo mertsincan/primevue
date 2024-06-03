@@ -67,7 +67,7 @@ export interface StepPanelProps {
     /**
      * Value of step.
      */
-    value: string;
+    value?: string | number | undefined;
     /**
      * Use to change the HTML tag of root element.
      * @defaultValue BUTTON
@@ -99,9 +99,26 @@ export interface StepPanelProps {
  */
 export interface StepPanelSlots {
     /**
-     * Custom content template.
+     * Custom content template. Slot attributes can be used when asChild prop is true.
      */
-    default(): VNode[];
+    default(scope: {
+        /**
+         * Whether the step is active.
+         */
+        active: boolean;
+        /**
+         * Value of step.
+         */
+        value: string | number;
+        /**
+         * A11t attributes
+         */
+        a11yAttrs: any;
+        /**
+         * Click function.
+         */
+        clickCallback: () => void;
+    }): VNode[];
 }
 
 export interface StepPanelEmitsOptions {}

@@ -86,10 +86,10 @@ export interface StepperState {
  */
 export interface StepperProps {
     /**
-     * Active step index of stepper.
-     * @defaultValue 0
+     * Active value of stepper.
+     * @defaultValue null
      */
-    activeStep?: number | undefined;
+    value?: string | number | undefined;
     /**
      * Whether the steps are clickable or not.
      * @defaultValue false

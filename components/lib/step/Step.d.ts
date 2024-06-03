@@ -83,7 +83,7 @@ export interface StepProps {
     /**
      * Value of step.
      */
-    value: string;
+    value?: string | number | undefined;
     /**
      * Whether the step is disabled.
      * @defaultValue false
@@ -134,9 +134,30 @@ export interface StepContext {
  */
 export interface StepSlots {
     /**
-     * Custom content template.
+     * Custom content template. Slot attributes can be used when asChild prop is true.
      */
-    default(): VNode[];
+    default(scope: {
+        /**
+         * Style class of the loader.
+         */
+        class: string;
+        /**
+         * Whether the step is active.
+         */
+        active: boolean;
+        /**
+         * Value of step.
+         */
+        value: string | number;
+        /**
+         * A11t attributes
+         */
+        a11yAttrs: any;
+        /**
+         * Click function.
+         */
+        clickCallback: () => void;
+    }): VNode[];
 }
 
 export interface StepEmitsOptions {}

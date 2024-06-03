@@ -67,7 +67,7 @@ export interface StepItemProps {
     /**
      * Value of step.
      */
-    value: string;
+    value?: string | number | undefined;
     /**
      * It generates scoped CSS variables using design tokens for the component.
      */
