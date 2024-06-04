@@ -12,29 +12,29 @@
                 <Step value="3">Header III</Step>
             </StepList>
             <StepPanels>
-                <StepPanel v-slot="{ clickCallback }" value="1">
+                <StepPanel v-slot="{ activateCallback }" value="1">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Next" icon="pi pi-arrow-right" @click="clickCallback('2')" />
+                        <Button label="Next" icon="pi pi-arrow-right" @click="activateCallback('2')" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" value="2">
+                <StepPanel v-slot="{ activateCallback }" value="2">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-6 justify-between">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('1')" />
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback('3')" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('1')" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback('3')" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" value="3">
+                <StepPanel v-slot="{ activateCallback }" value="3">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('2')" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('2')" />
                     </div>
                 </StepPanel>
             </StepPanels>
@@ -56,29 +56,29 @@ export default {
         <Step value="3">Header III</Step>
     </StepList>
     <StepPanels>
-        <StepPanel v-slot="{ clickCallback }" value="1">
+        <StepPanel v-slot="{ activateCallback }" value="1">
             <div class="flex flex-col h-48">
                 <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
             </div>
             <div class="flex pt-6 justify-start">
-                <Button label="Next" icon="pi pi-arrow-right" @click="clickCallback('2')" />
+                <Button label="Next" icon="pi pi-arrow-right" @click="activateCallback('2')" />
             </div>
         </StepPanel>
-        <StepPanel v-slot="{ clickCallback }" value="2">
+        <StepPanel v-slot="{ activateCallback }" value="2">
             <div class="flex flex-col h-48">
                 <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
             </div>
             <div class="flex pt-6 justify-between">
-                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('1')" />
-                <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback('3')" />
+                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('1')" />
+                <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback('3')" />
             </div>
         </StepPanel>
-        <StepPanel v-slot="{ clickCallback }" value="3">
+        <StepPanel v-slot="{ activateCallback }" value="3">
             <div class="flex flex-col h-48">
                 <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
             </div>
             <div class="flex pt-6 justify-start">
-                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('2')" />
+                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('2')" />
             </div>
         </StepPanel>
     </StepPanels>
@@ -94,29 +94,29 @@ export default {
                 <Step value="3">Header III</Step>
             </StepList>
             <StepPanels>
-                <StepPanel v-slot="{ clickCallback }" value="1">
+                <StepPanel v-slot="{ activateCallback }" value="1">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Next" icon="pi pi-arrow-right" @click="clickCallback('2')" />
+                        <Button label="Next" icon="pi pi-arrow-right" @click="activateCallback('2')" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" value="2">
+                <StepPanel v-slot="{ activateCallback }" value="2">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-6 justify-between">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('1')" />
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback('3')" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('1')" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback('3')" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" value="3">
+                <StepPanel v-slot="{ activateCallback }" value="3">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('2')" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('2')" />
                     </div>
                 </StepPanel>
             </StepPanels>
@@ -134,29 +134,29 @@ export default {
                 <Step value="3">Header III</Step>
             </StepList>
             <StepPanels>
-                <StepPanel v-slot="{ clickCallback }" value="1">
+                <StepPanel v-slot="{ activateCallback }" value="1">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Next" icon="pi pi-arrow-right" @click="clickCallback('2')" />
+                        <Button label="Next" icon="pi pi-arrow-right" @click="activateCallback('2')" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" value="2">
+                <StepPanel v-slot="{ activateCallback }" value="2">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-6 justify-between">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('1')" />
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback('3')" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('1')" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback('3')" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" value="3">
+                <StepPanel v-slot="{ activateCallback }" value="3">
                     <div class="flex flex-col h-48">
                         <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback('2')" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback('2')" />
                     </div>
                 </StepPanel>
             </StepPanels>

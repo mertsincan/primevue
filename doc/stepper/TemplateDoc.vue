@@ -5,9 +5,9 @@
     <div class="card flex justify-center">
         <Stepper v-model:value="activeStep" class="basis-[40rem]">
             <StepList>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="1">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="1">
                     <div class="flex flex-row flex-auto gap-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -20,9 +20,9 @@
                         <Divider />
                     </div>
                 </Step>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="2">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="2">
                     <div class="flex flex-row flex-auto gap-2 pl-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -35,9 +35,9 @@
                         <Divider />
                     </div>
                 </Step>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="3">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="3">
                     <div class="flex flex-row pl-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -51,7 +51,7 @@
                 </Step>
             </StepList>
             <StepPanels>
-                <StepPanel v-slot="{ clickCallback }" :value="1">
+                <StepPanel v-slot="{ activateCallback }" :value="1">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Create your account</div>
                         <div class="field p-fluid">
@@ -75,10 +75,10 @@
                         </div>
                     </div>
                     <div class="flex pt-6 justify-end">
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(2)" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(2)" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" :value="2">
+                <StepPanel v-slot="{ activateCallback }" :value="2">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Choose your interests</div>
                         <div class="flex flex-wrap justify-center gap-4">
@@ -95,11 +95,11 @@
                         </div>
                     </div>
                     <div class="flex pt-6 justify-between">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(1)" />
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(3)" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(1)" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(3)" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" :value="3">
+                <StepPanel v-slot="{ activateCallback }" :value="3">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Account created successfully</div>
                         <div class="text-center">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(2)" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(2)" />
                     </div>
                 </StepPanel>
             </StepPanels>
@@ -138,9 +138,9 @@ export default {
                 basic: `
 <Stepper v-model:value="activeStep" class="basis-[40rem]">
     <StepList>
-        <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="1">
+        <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="1">
             <div class="flex flex-row flex-auto gap-2" v-bind="a11yAttrs.root">
-                <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                     <span
                         :class="[
                             'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -153,9 +153,9 @@ export default {
                 <Divider />
             </div>
         </Step>
-        <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="2">
+        <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="2">
             <div class="flex flex-row flex-auto gap-2 pl-2" v-bind="a11yAttrs.root">
-                <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                     <span
                         :class="[
                             'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -168,9 +168,9 @@ export default {
                 <Divider />
             </div>
         </Step>
-        <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="3">
+        <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="3">
             <div class="flex flex-row pl-2" v-bind="a11yAttrs.root">
-                <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                     <span
                         :class="[
                             'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -184,7 +184,7 @@ export default {
         </Step>
     </StepList>
     <StepPanels>
-        <StepPanel v-slot="{ clickCallback }" :value="1">
+        <StepPanel v-slot="{ activateCallback }" :value="1">
             <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                 <div class="text-center mt-4 mb-4 text-xl font-semibold">Create your account</div>
                 <div class="field p-fluid">
@@ -208,10 +208,10 @@ export default {
                 </div>
             </div>
             <div class="flex pt-6 justify-end">
-                <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(2)" />
+                <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(2)" />
             </div>
         </StepPanel>
-        <StepPanel v-slot="{ clickCallback }" :value="2">
+        <StepPanel v-slot="{ activateCallback }" :value="2">
             <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                 <div class="text-center mt-4 mb-4 text-xl font-semibold">Choose your interests</div>
                 <div class="flex flex-wrap justify-center gap-4">
@@ -228,11 +228,11 @@ export default {
                 </div>
             </div>
             <div class="flex pt-6 justify-between">
-                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(1)" />
-                <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(3)" />
+                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(1)" />
+                <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(3)" />
             </div>
         </StepPanel>
-        <StepPanel v-slot="{ clickCallback }" :value="3">
+        <StepPanel v-slot="{ activateCallback }" :value="3">
             <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                 <div class="text-center mt-4 mb-4 text-xl font-semibold">Account created successfully</div>
                 <div class="text-center">
@@ -240,7 +240,7 @@ export default {
                 </div>
             </div>
             <div class="flex pt-6 justify-start">
-                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(2)" />
+                <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(2)" />
             </div>
         </StepPanel>
     </StepPanels>
@@ -251,9 +251,9 @@ export default {
     <div class="card flex justify-center">
         <Stepper v-model:value="activeStep" class="basis-[40rem]">
             <StepList>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="1">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="1">
                     <div class="flex flex-row flex-auto gap-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -266,9 +266,9 @@ export default {
                         <Divider />
                     </div>
                 </Step>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="2">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="2">
                     <div class="flex flex-row flex-auto gap-2 pl-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -281,9 +281,9 @@ export default {
                         <Divider />
                     </div>
                 </Step>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="3">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="3">
                     <div class="flex flex-row pl-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -297,7 +297,7 @@ export default {
                 </Step>
             </StepList>
             <StepPanels>
-                <StepPanel v-slot="{ clickCallback }" :value="1">
+                <StepPanel v-slot="{ activateCallback }" :value="1">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Create your account</div>
                         <div class="field p-fluid">
@@ -321,10 +321,10 @@ export default {
                         </div>
                     </div>
                     <div class="flex pt-6 justify-end">
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(2)" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(2)" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" :value="2">
+                <StepPanel v-slot="{ activateCallback }" :value="2">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Choose your interests</div>
                         <div class="flex flex-wrap justify-center gap-4">
@@ -341,11 +341,11 @@ export default {
                         </div>
                     </div>
                     <div class="flex pt-6 justify-between">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(1)" />
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(3)" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(1)" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(3)" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" :value="3">
+                <StepPanel v-slot="{ activateCallback }" :value="3">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Account created successfully</div>
                         <div class="text-center">
@@ -353,7 +353,7 @@ export default {
                         </div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(2)" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(2)" />
                     </div>
                 </StepPanel>
             </StepPanels>
@@ -389,9 +389,9 @@ export default {
     <div class="card flex justify-center">
         <Stepper v-model:value="activeStep" class="basis-[40rem]">
             <StepList>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="1">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="1">
                     <div class="flex flex-row flex-auto gap-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -404,9 +404,9 @@ export default {
                         <Divider />
                     </div>
                 </Step>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="2">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="2">
                     <div class="flex flex-row flex-auto gap-2 pl-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -419,9 +419,9 @@ export default {
                         <Divider />
                     </div>
                 </Step>
-                <Step v-slot="{ clickCallback, value, a11yAttrs }" asChild :value="3">
+                <Step v-slot="{ activateCallback, value, a11yAttrs }" asChild :value="3">
                     <div class="flex flex-row pl-2" v-bind="a11yAttrs.root">
-                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="clickCallback" v-bind="a11yAttrs.header">
+                        <button class="bg-transparent border-0 inline-flex flex-col gap-2" @click="activateCallback" v-bind="a11yAttrs.header">
                             <span
                                 :class="[
                                     'rounded-full border-2 w-12 h-12 inline-flex items-center justify-center',
@@ -435,7 +435,7 @@ export default {
                 </Step>
             </StepList>
             <StepPanels>
-                <StepPanel v-slot="{ clickCallback }" :value="1">
+                <StepPanel v-slot="{ activateCallback }" :value="1">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Create your account</div>
                         <div class="field p-fluid">
@@ -459,10 +459,10 @@ export default {
                         </div>
                     </div>
                     <div class="flex pt-6 justify-end">
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(2)" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(2)" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" :value="2">
+                <StepPanel v-slot="{ activateCallback }" :value="2">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Choose your interests</div>
                         <div class="flex flex-wrap justify-center gap-4">
@@ -479,11 +479,11 @@ export default {
                         </div>
                     </div>
                     <div class="flex pt-6 justify-between">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(1)" />
-                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="clickCallback(3)" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(1)" />
+                        <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="activateCallback(3)" />
                     </div>
                 </StepPanel>
-                <StepPanel v-slot="{ clickCallback }" :value="3">
+                <StepPanel v-slot="{ activateCallback }" :value="3">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-4 mb-4 text-xl font-semibold">Account created successfully</div>
                         <div class="text-center">
@@ -491,7 +491,7 @@ export default {
                         </div>
                     </div>
                     <div class="flex pt-6 justify-start">
-                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="clickCallback(2)" />
+                        <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="activateCallback(2)" />
                     </div>
                 </StepPanel>
             </StepPanels>

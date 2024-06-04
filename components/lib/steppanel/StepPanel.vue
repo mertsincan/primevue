@@ -5,20 +5,20 @@
                 <component v-show="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="getPTOptions('root')">
                     <StepperSeparator v-if="isSeparatorVisible" />
                     <div :class="cx('content')" v-bind="getPTOptions('content')">
-                        <slot :active="active" :clickCallback="(val) => updateValue(val)" />
+                        <slot :active="active" :activateCallback="(val) => updateValue(val)" />
                     </div>
                 </component>
             </transition>
         </template>
-        <slot v-else :active="active" :a11yAttrs="a11yAttrs" :clickCallback="(val) => updateValue(val)" />
+        <slot v-else :active="active" :a11yAttrs="a11yAttrs" :activateCallback="(val) => updateValue(val)" />
     </template>
     <template v-else>
         <template v-if="!asChild">
             <component v-if="active" :is="as" :id="id" :class="cx('root')" role="tabpanel" :aria-controls="ariaControls" v-bind="getPTOptions('root')">
-                <slot :active="active" :clickCallback="(val) => updateValue(val)" />
+                <slot :active="active" :activateCallback="(val) => updateValue(val)" />
             </component>
         </template>
-        <slot v-else-if="asChild && active" :active="active" :a11yAttrs="a11yAttrs" :clickCallback="(val) => updateValue(val)" />
+        <slot v-else-if="asChild && active" :active="active" :a11yAttrs="a11yAttrs" :activateCallback="(val) => updateValue(val)" />
     </template>
 </template>
 

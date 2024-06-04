@@ -156,7 +156,7 @@ export interface StepSlots {
         /**
          * Click function.
          */
-        clickCallback: () => void;
+        activateCallback: () => void;
     }): VNode[];
 }
 
