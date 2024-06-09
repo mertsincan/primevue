@@ -1,0 +1,11 @@
+{
+    "name": "@primevue/auto-import-resolver",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "unplugin-vue-components": "^0.27.0"
+    }
+}
