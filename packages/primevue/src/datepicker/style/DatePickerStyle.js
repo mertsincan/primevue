@@ -126,8 +126,8 @@ const theme = ({ dt }) => `
     cursor: pointer;
     font-weight: inherit;
     transition: background ${dt('datepicker.transition.duration')}, color ${dt('datepicker.transition.duration')}, border-color ${dt('datepicker.transition.duration')}, outline-color ${dt('datepicker.transition.duration')}, box-shadow ${dt(
-    'datepicker.transition.duration'
-)};
+        'datepicker.transition.duration'
+    )};
 }
 
 .p-datepicker-select-month {
@@ -254,8 +254,8 @@ const theme = ({ dt }) => `
     position: relative;
     padding: ${dt('datepicker.date.padding')};
     transition: background ${dt('datepicker.transition.duration')}, color ${dt('datepicker.transition.duration')}, border-color ${dt('datepicker.transition.duration')}, box-shadow ${dt('datepicker.transition.duration')}, outline-color ${dt(
-    'datepicker.transition.duration'
-)};
+        'datepicker.transition.duration'
+    )};
     border-radius: ${dt('datepicker.month.border.radius')};
     outline-color: transparent;
     color: ${dt('datepicker.date.color')};
@@ -291,8 +291,8 @@ const theme = ({ dt }) => `
     position: relative;
     padding: ${dt('datepicker.date.padding')};
     transition: background ${dt('datepicker.transition.duration')}, color ${dt('datepicker.transition.duration')}, border-color ${dt('datepicker.transition.duration')}, box-shadow ${dt('datepicker.transition.duration')}, outline-color ${dt(
-    'datepicker.transition.duration'
-)};
+        'datepicker.transition.duration'
+    )};
     border-radius: ${dt('datepicker.year.border.radius')};
     outline-color: transparent;
     color: ${dt('datepicker.date.color')};
