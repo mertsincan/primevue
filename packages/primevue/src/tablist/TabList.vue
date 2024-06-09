@@ -36,9 +36,9 @@
 </template>
 
 <script>
+import { DomHandler } from '@primevue/core/utils';
 import ChevronLeftIcon from '@primevue/icons/chevronleft';
 import ChevronRightIcon from '@primevue/icons/chevronright';
-import { DomHandler } from 'primevue/utils';
 import BaseTabList from './BaseTabList.vue';
 
 export default {

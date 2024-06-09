@@ -67,6 +67,7 @@
 </template>
 
 <script>
+import { DomHandler, ObjectUtils, UniqueComponentId } from '@primevue/core/utils';
 import AngleDoubleDownIcon from '@primevue/icons/angledoubledown';
 import AngleDoubleUpIcon from '@primevue/icons/angledoubleup';
 import AngleDownIcon from '@primevue/icons/angledown';
@@ -74,7 +75,6 @@ import AngleUpIcon from '@primevue/icons/angleup';
 import Button from 'primevue/button';
 import Listbox from 'primevue/listbox';
 import Ripple from 'primevue/ripple';
-import { DomHandler, ObjectUtils, UniqueComponentId } from 'primevue/utils';
 import BaseOrderList from './BaseOrderList.vue';
 
 export default {

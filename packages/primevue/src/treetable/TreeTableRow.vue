@@ -66,7 +66,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
-import { DomHandler, ObjectUtils } from 'primevue/utils';
+import { DomHandler, ObjectUtils } from '@primevue/core/utils';
 import BodyCell from './BodyCell.vue';
 
 export default {

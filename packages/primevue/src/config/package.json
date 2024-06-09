@@ -1,5 +1,5 @@
 {
-    "main": "./PrimeVue.js",
-    "module": "./PrimeVue.js",
-    "types": "./PrimeVue.d.ts"
+    "main": "./Config.js",
+    "module": "./Config.js",
+    "types": "./Config.d.ts"
 }

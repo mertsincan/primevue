@@ -75,10 +75,10 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { ObjectUtils } from '@primevue/core/utils';
 import AngleDownIcon from '@primevue/icons/angledown';
 import AngleRightIcon from '@primevue/icons/angleright';
 import Ripple from 'primevue/ripple';
-import { ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 
 export default {

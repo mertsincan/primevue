@@ -11,9 +11,9 @@
 </template>
 
 <script>
+import { DomHandler, ZIndexUtils } from '@primevue/core/utils';
 import ChevronUpIcon from '@primevue/icons/chevronup';
 import Button from 'primevue/button';
-import { DomHandler, ZIndexUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 import BaseScrollTop from './BaseScrollTop.vue';
 

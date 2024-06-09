@@ -26,11 +26,6 @@ export default defineNuxtConfig({
         importTheme: { from: '@/themes/app-theme.js' },
         components: {
             exclude: []
-        },
-        resolvePath: function ({ as, from, type }) {
-            const resolvedPath = from.replace('primevue', 'primevue');
-
-            return type === 'component' ? `${resolvedPath}/${as}.vue` : `${resolvedPath}/${as}.js`;
         }
     },
     app: {

@@ -61,9 +61,9 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { UniqueComponentId } from '@primevue/core/utils';
 import TimesIcon from '@primevue/icons/times';
 import Ripple from 'primevue/ripple';
-import { UniqueComponentId } from 'primevue/utils';
 import GalleriaItem from './GalleriaItem.vue';
 import GalleriaThumbnails from './GalleriaThumbnails.vue';
 

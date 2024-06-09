@@ -76,9 +76,9 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { DomHandler, ObjectUtils } from '@primevue/core/utils';
 import AngleRightIcon from '@primevue/icons/angleright';
 import Ripple from 'primevue/ripple';
-import { DomHandler, ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 
 export default {

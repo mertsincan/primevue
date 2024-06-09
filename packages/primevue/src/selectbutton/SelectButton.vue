@@ -21,9 +21,9 @@
 </template>
 
 <script>
+import { ObjectUtils } from '@primevue/core/utils';
 import Ripple from 'primevue/ripple';
 import ToggleButton from 'primevue/togglebutton';
-import { ObjectUtils } from 'primevue/utils';
 import BaseSelectButton from './BaseSelectButton.vue';
 
 export default {

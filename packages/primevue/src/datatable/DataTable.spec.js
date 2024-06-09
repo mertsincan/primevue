@@ -1,5 +1,5 @@
+import { FilterMatchMode } from '@primevue/core/api';
 import { mount } from '@vue/test-utils';
-import { FilterMatchMode } from 'primevue/api';
 import Button from 'primevue/button';
 import PrimeVue from 'primevue/config';
 import InputText from 'primevue/inputtext';

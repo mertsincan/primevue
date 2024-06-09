@@ -57,9 +57,9 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { DomHandler, ObjectUtils, UniqueComponentId } from '@primevue/core/utils';
 import Ripple from 'primevue/ripple';
 import Tooltip from 'primevue/tooltip';
-import { DomHandler, ObjectUtils, UniqueComponentId } from 'primevue/utils';
 import { mergeProps } from 'vue';
 
 export default {

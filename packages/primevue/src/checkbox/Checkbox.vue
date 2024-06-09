@@ -31,9 +31,9 @@
 </template>
 
 <script>
+import { ObjectUtils } from '@primevue/core/utils';
 import CheckIcon from '@primevue/icons/check';
 import MinusIcon from '@primevue/icons/minus';
-import { ObjectUtils } from 'primevue/utils';
 import BaseCheckbox from './BaseCheckbox.vue';
 
 export default {

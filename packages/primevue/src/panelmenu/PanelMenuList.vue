@@ -23,7 +23,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
-import { DomHandler, ObjectUtils } from 'primevue/utils';
+import { DomHandler, ObjectUtils } from '@primevue/core/utils';
 import PanelMenuSub from './PanelMenuSub.vue';
 
 export default {

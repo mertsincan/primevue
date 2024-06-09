@@ -164,18 +164,18 @@
 </template>
 
 <script>
+import { FilterOperator } from '@primevue/core/api';
 import BaseComponent from '@primevue/core/basecomponent';
+import { ConnectedOverlayScrollHandler, DomHandler, UniqueComponentId, ZIndexUtils } from '@primevue/core/utils';
 import FilterIcon from '@primevue/icons/filter';
 import FilterSlashIcon from '@primevue/icons/filterslash';
 import PlusIcon from '@primevue/icons/plus';
 import TrashIcon from '@primevue/icons/trash';
-import { FilterOperator } from 'primevue/api';
 import Button from 'primevue/button';
 import FocusTrap from 'primevue/focustrap';
 import OverlayEventBus from 'primevue/overlayeventbus';
 import Portal from 'primevue/portal';
 import Select from 'primevue/select';
-import { ConnectedOverlayScrollHandler, DomHandler, UniqueComponentId, ZIndexUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 
 export default {

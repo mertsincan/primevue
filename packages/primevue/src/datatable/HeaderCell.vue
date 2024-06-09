@@ -85,11 +85,11 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { DomHandler, ObjectUtils } from '@primevue/core/utils';
 import SortAltIcon from '@primevue/icons/sortalt';
 import SortAmountDownIcon from '@primevue/icons/sortamountdown';
 import SortAmountUpAltIcon from '@primevue/icons/sortamountupalt';
 import Badge from 'primevue/badge';
-import { DomHandler, ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 import ColumnFilter from './ColumnFilter.vue';
 import HeaderCheckbox from './HeaderCheckbox.vue';

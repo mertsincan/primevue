@@ -17,7 +17,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
-import { HelperSet, ObjectUtils } from 'primevue/utils';
+import { HelperSet, ObjectUtils } from '@primevue/core/utils';
 import { mergeProps } from 'vue';
 import FooterCell from './FooterCell.vue';
 

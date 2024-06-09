@@ -26,8 +26,8 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { ObjectUtils } from '@primevue/core/utils';
 import Ripple from 'primevue/ripple';
-import { ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 
 export default {

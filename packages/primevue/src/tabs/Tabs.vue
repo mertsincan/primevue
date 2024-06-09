@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { UniqueComponentId } from 'primevue/utils';
+import { UniqueComponentId } from '@primevue/core/utils';
 import BaseTabs from './BaseTabs.vue';
 
 export default {

@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { DomHandler, UniqueComponentId, ZIndexUtils } from '@primevue/core/utils';
 import TimesIcon from '@primevue/icons/times';
 import WindowMaximizeIcon from '@primevue/icons/windowmaximize';
 import WindowMinimizeIcon from '@primevue/icons/windowminimize';
@@ -69,7 +70,6 @@ import Button from 'primevue/button';
 import FocusTrap from 'primevue/focustrap';
 import Portal from 'primevue/portal';
 import Ripple from 'primevue/ripple';
-import { DomHandler, UniqueComponentId, ZIndexUtils } from 'primevue/utils';
 import { computed } from 'vue';
 import BaseDialog from './BaseDialog.vue';
 

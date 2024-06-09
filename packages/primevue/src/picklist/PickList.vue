@@ -166,6 +166,7 @@
 </template>
 
 <script>
+import { DomHandler, ObjectUtils, UniqueComponentId } from '@primevue/core/utils';
 import AngleDoubleDownIcon from '@primevue/icons/angledoubledown';
 import AngleDoubleLeftIcon from '@primevue/icons/angledoubleleft';
 import AngleDoubleRightIcon from '@primevue/icons/angledoubleright';
@@ -177,7 +178,6 @@ import AngleUpIcon from '@primevue/icons/angleup';
 import Button from 'primevue/button';
 import Listbox from 'primevue/listbox';
 import Ripple from 'primevue/ripple';
-import { DomHandler, ObjectUtils, UniqueComponentId } from 'primevue/utils';
 import BasePickList from './BasePickList.vue';
 
 export default {

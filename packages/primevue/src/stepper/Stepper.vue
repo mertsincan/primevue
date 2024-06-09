@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { UniqueComponentId } from 'primevue/utils';
+import { UniqueComponentId } from '@primevue/core/utils';
 import BaseStepper from './BaseStepper.vue';
 
 export default {

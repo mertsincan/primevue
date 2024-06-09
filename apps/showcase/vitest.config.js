@@ -22,7 +22,7 @@ export default mergeConfig(
         },
         resolve: {
             alias: {
-                'primevue/config': path.resolve(__dirname, './components/lib/config/PrimeVue.js')
+                //'primevue/config': path.resolve(__dirname, './components/lib/config/PrimeVue.js')
             }
         }
     })

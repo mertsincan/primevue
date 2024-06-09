@@ -37,10 +37,10 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { DomHandler } from '@primevue/core/utils';
 import ChevronLeftIcon from '@primevue/icons/chevronleft';
 import ChevronRightIcon from '@primevue/icons/chevronright';
 import Ripple from 'primevue/ripple';
-import { DomHandler } from 'primevue/utils';
 
 export default {
     name: 'GalleriaItem',

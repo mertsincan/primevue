@@ -81,6 +81,7 @@ const themes = [
 
 export { styles, stylesToTop, themes };
 `;
+
         nuxt.options.alias['#primevue-style'] = addTemplate({
             filename: 'primevue-style.mjs',
             getContents: styleContent

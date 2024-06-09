@@ -7,7 +7,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
-import { DomHandler, ObjectUtils } from 'primevue/utils';
+import { DomHandler, ObjectUtils } from '@primevue/core/utils';
 import { mergeProps } from 'vue';
 
 export default {

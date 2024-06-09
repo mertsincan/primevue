@@ -205,12 +205,13 @@
 </template>
 
 <script>
+import { FilterService } from '@primevue/core/api';
+import { ConnectedOverlayScrollHandler, DomHandler, ObjectUtils, UniqueComponentId, ZIndexUtils } from '@primevue/core/utils';
 import CheckIcon from '@primevue/icons/check';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
 import SearchIcon from '@primevue/icons/search';
 import SpinnerIcon from '@primevue/icons/spinner';
 import TimesIcon from '@primevue/icons/times';
-import { FilterService } from 'primevue/api';
 import Checkbox from 'primevue/checkbox';
 import Chip from 'primevue/chip';
 import IconField from 'primevue/iconfield';
@@ -219,7 +220,6 @@ import InputText from 'primevue/inputtext';
 import OverlayEventBus from 'primevue/overlayeventbus';
 import Portal from 'primevue/portal';
 import Ripple from 'primevue/ripple';
-import { ConnectedOverlayScrollHandler, DomHandler, ObjectUtils, UniqueComponentId, ZIndexUtils } from 'primevue/utils';
 import VirtualScroller from 'primevue/virtualscroller';
 import BaseMultiSelect from './BaseMultiSelect.vue';
 

@@ -87,7 +87,7 @@
 </template>
 
 <script>
-import { DomHandler, UniqueComponentId } from 'primevue/utils';
+import { DomHandler, UniqueComponentId } from '@primevue/core/utils';
 import BasePaginator from './BasePaginator.vue';
 import CurrrentPageReport from './CurrentPageReport.vue';
 import FirstPageLink from './FirstPageLink.vue';

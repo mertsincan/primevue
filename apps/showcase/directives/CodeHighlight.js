@@ -1,4 +1,4 @@
-import { DomHandler } from 'primevue/utils';
+import { DomHandler } from '@primevue/core/utils';
 
 const CodeHighlight = {
     mounted(el, binding) {

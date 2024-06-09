@@ -53,9 +53,9 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { DomHandler } from '@primevue/core/utils';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
 import ChevronUpIcon from '@primevue/icons/chevronup';
-import { DomHandler } from 'primevue/utils';
 
 export default {
     name: 'OrganizationChartNode',

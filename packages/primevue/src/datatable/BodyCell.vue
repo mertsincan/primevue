@@ -128,6 +128,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { DomHandler, ObjectUtils } from '@primevue/core/utils';
 import BarsIcon from '@primevue/icons/bars';
 import CheckIcon from '@primevue/icons/check';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
@@ -137,7 +138,6 @@ import TimesIcon from '@primevue/icons/times';
 import Button from 'primevue/button';
 import OverlayEventBus from 'primevue/overlayeventbus';
 import Ripple from 'primevue/ripple';
-import { DomHandler, ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 import RowCheckbox from './RowCheckbox.vue';
 import RowRadioButton from './RowRadioButton.vue';

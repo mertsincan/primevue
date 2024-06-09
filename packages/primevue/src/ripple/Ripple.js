@@ -1,4 +1,4 @@
-import { DomHandler } from 'primevue/utils';
+import { DomHandler } from '@primevue/core/utils';
 import BaseRipple from './BaseRipple';
 
 const Ripple = BaseRipple.extend('ripple', {

@@ -168,10 +168,10 @@
 </template>
 
 <script>
+import { FilterService } from '@primevue/core/api';
+import { DomHandler, HelperSet, ObjectUtils, UniqueComponentId } from '@primevue/core/utils';
 import SpinnerIcon from '@primevue/icons/spinner';
-import { FilterService } from 'primevue/api';
 import Paginator from 'primevue/paginator';
-import { DomHandler, HelperSet, ObjectUtils, UniqueComponentId } from 'primevue/utils';
 import BaseTreeTable from './BaseTreeTable.vue';
 import FooterCell from './FooterCell.vue';
 import HeaderCell from './HeaderCell.vue';

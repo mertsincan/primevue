@@ -56,6 +56,7 @@
 </template>
 
 <script>
+import { DomHandler, ZIndexUtils } from '@primevue/core/utils';
 import EyeIcon from '@primevue/icons/eye';
 import RefreshIcon from '@primevue/icons/refresh';
 import SearchMinusIcon from '@primevue/icons/searchminus';
@@ -64,7 +65,6 @@ import TimesIcon from '@primevue/icons/times';
 import UndoIcon from '@primevue/icons/undo';
 import FocusTrap from 'primevue/focustrap';
 import Portal from 'primevue/portal';
-import { DomHandler, ZIndexUtils } from 'primevue/utils';
 import BaseImage from './BaseImage.vue';
 
 export default {

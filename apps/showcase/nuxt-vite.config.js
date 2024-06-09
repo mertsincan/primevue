@@ -234,10 +234,10 @@ export default {
             '@primevue/icons': path.resolve(__dirname, '../../packages/icons/src')
 
             /*
-            'primevue/utils': path.resolve(__dirname, './components/lib/utils/Utils.js'),
+            '@primevue/core/utils': path.resolve(__dirname, './components/lib/utils/Utils.js'),
             'primevue/service': path.resolve(__dirname, './components/lib/service/PrimeVueService.js'),
             'primevue/config': path.resolve(__dirname, './components/lib/config/PrimeVue.js'),
-            'primevue/api': path.resolve(__dirname, './components/lib/api/Api.js'),
+            '@primevue/core/api': path.resolve(__dirname, './components/lib/api/Api.js'),
             ...STYLE_ALIAS,
             ...THEME_ALIAS,
             'primevue/base': path.resolve(__dirname, './components/lib/base/Base.js'),

@@ -76,6 +76,7 @@
 </template>
 
 <script>
+import { DomHandler } from '@primevue/core/utils';
 import PlusIcon from '@primevue/icons/plus';
 import TimesIcon from '@primevue/icons/times';
 import UploadIcon from '@primevue/icons/upload';
@@ -83,7 +84,6 @@ import Button from 'primevue/button';
 import Message from 'primevue/message';
 import ProgressBar from 'primevue/progressbar';
 import Ripple from 'primevue/ripple';
-import { DomHandler } from 'primevue/utils';
 import BaseFileUpload from './BaseFileUpload.vue';
 import FileContent from './FileContent.vue';
 

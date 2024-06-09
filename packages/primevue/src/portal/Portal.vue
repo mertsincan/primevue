@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { DomHandler } from 'primevue/utils';
+import { DomHandler } from '@primevue/core/utils';
 
 export default {
     name: 'Portal',

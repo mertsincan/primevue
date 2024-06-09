@@ -71,7 +71,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
-import { DomHandler, ObjectUtils, UniqueComponentId } from 'primevue/utils';
+import { DomHandler, ObjectUtils, UniqueComponentId } from '@primevue/core/utils';
 import BodyRow from './BodyRow.vue';
 
 export default {

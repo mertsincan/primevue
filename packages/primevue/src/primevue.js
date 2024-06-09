@@ -35,7 +35,7 @@ export * from './animateonscroll/style/AnimateOnScrollStyle.js';
 export { default as AnimateOnScrollStyle } from './animateonscroll/style/AnimateOnScrollStyle.js';
 
 // Api
-export * from './api/Api.js';
+export * from '../../core/src/api/Api.js';
 
 // AutoComplete
 export * from './autocomplete/AutoComplete.vue';
@@ -180,8 +180,8 @@ export * from './columngroup/style/ColumnGroupStyle.js';
 export { default as ColumnGroupStyle } from './columngroup/style/ColumnGroupStyle.js';
 
 // Config
-export * from './config/PrimeVue.js';
-export { default as Config } from './config/PrimeVue.js';
+export * from '../../core/src/config/PrimeVue.js';
+export { default as Config } from '../../core/src/config/PrimeVue.js';
 
 // ConfirmationEventBus
 export * from './confirmationeventbus/ConfirmationEventBus.js';

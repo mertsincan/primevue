@@ -1,5 +1,5 @@
 import BaseStyle from '@primevue/core/base/style';
-import { ObjectUtils } from 'primevue/utils';
+import { ObjectUtils } from '@primevue/core/utils';
 
 const theme = ({ dt }) => `
 .p-autocomplete {

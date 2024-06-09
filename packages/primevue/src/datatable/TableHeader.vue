@@ -133,7 +133,7 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
-import { HelperSet, ObjectUtils } from 'primevue/utils';
+import { HelperSet, ObjectUtils } from '@primevue/core/utils';
 import { mergeProps } from 'vue';
 import ColumnFilter from './ColumnFilter.vue';
 import HeaderCell from './HeaderCell.vue';

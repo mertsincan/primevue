@@ -94,9 +94,9 @@
 
 <script>
 import BaseComponent from '@primevue/core/basecomponent';
+import { ObjectUtils } from '@primevue/core/utils';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
 import ChevronRightIcon from '@primevue/icons/chevronright';
-import { ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 import BodyCell from './BodyCell.vue';
 
