@@ -1,5 +1,5 @@
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import DataTableStyle from 'primevue/datatable/style';
 
 export default {

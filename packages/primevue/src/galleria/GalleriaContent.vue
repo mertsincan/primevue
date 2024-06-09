@@ -60,8 +60,8 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import TimesIcon from '@primevue/icons/times';
-import BaseComponent from 'primevue/basecomponent';
 import Ripple from 'primevue/ripple';
 import { UniqueComponentId } from 'primevue/utils';
 import GalleriaItem from './GalleriaItem.vue';

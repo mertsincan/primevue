@@ -36,9 +36,9 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import ChevronLeftIcon from '@primevue/icons/chevronleft';
 import ChevronRightIcon from '@primevue/icons/chevronright';
-import BaseComponent from 'primevue/basecomponent';
 import Ripple from 'primevue/ripple';
 import { DomHandler } from 'primevue/utils';
 

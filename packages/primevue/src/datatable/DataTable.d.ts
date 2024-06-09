@@ -8,7 +8,7 @@
  *
  */
 import { InputHTMLAttributes, TableHTMLAttributes, TransitionProps, VNode } from 'vue';
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { ButtonProps } from '../button';
 import { ColumnPassThroughOptionType } from '../column';
 import { ColumnGroupPassThroughOptionType } from '../columngroup';

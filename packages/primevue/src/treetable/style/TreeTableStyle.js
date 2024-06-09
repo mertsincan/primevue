@@ -1,4 +1,4 @@
-import BaseStyle from 'primevue/base/style';
+import BaseStyle from '@primevue/core/base/style';
 
 const theme = ({ dt }) => `
 .p-treetable {
@@ -154,7 +154,7 @@ const theme = ({ dt }) => `
     color: ${dt('treetable.header.cell.color')};
     font-weight: normal;
     text-align: left;
-    transition: background ${dt('treetable.transition.duration')}, color ${dt('treetable.transition.duration')}, border-color ${dt('treetable.transition.duration')}, 
+    transition: background ${dt('treetable.transition.duration')}, color ${dt('treetable.transition.duration')}, border-color ${dt('treetable.transition.duration')},
             outline-color ${dt('treetable.transition.duration')}, box-shadow ${dt('treetable.transition.duration')};
 }
 
@@ -166,7 +166,7 @@ const theme = ({ dt }) => `
     outline-color: transparent;
     background: ${dt('treetable.row.background')};
     color: ${dt('treetable.row.color')};
-    transition: background ${dt('treetable.transition.duration')}, color ${dt('treetable.transition.duration')}, border-color ${dt('treetable.transition.duration')}, 
+    transition: background ${dt('treetable.transition.duration')}, color ${dt('treetable.transition.duration')}, border-color ${dt('treetable.transition.duration')},
             outline-color ${dt('treetable.transition.duration')}, box-shadow ${dt('treetable.transition.duration')};
 }
 
@@ -399,7 +399,7 @@ p-treetable-gridlines .p-treetable-tbody > tr:last-child > td {
     background: transparent;
     cursor: pointer;
     border-radius: ${dt('treetable.node.toggle.button.border.radius')};
-    transition: background ${dt('treetable.transition.duration')}, color ${dt('treetable.transition.duration')}, border-color ${dt('treetable.transition.duration')}, 
+    transition: background ${dt('treetable.transition.duration')}, color ${dt('treetable.transition.duration')}, border-color ${dt('treetable.transition.duration')},
             outline-color ${dt('treetable.transition.duration')}, box-shadow ${dt('treetable.transition.duration')};
     outline-color: transparent;
     user-select: none;

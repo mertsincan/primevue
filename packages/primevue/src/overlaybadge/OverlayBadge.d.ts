@@ -8,8 +8,8 @@
  *
  */
 import { VNode } from 'vue';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { BadgePassThroughOptions } from '../badge';
-import { ComponentHooks } from '../basecomponent';
 import { PassThroughOptions } from '../passthrough';
 import { DefineComponent, DesignToken, EmitFn, GlobalComponentConstructor, HintedString, PassThrough } from '../ts-helpers';
 

@@ -5,8 +5,8 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import AngleDoubleRightIcon from '@primevue/icons/angledoubleright';
-import BaseComponent from 'primevue/basecomponent';
 import Ripple from 'primevue/ripple';
 
 export default {

@@ -74,10 +74,10 @@ export * from './base/style/BaseStyle.js';
 export { default as BaseStyle } from './base/style/BaseStyle.js';
 
 // BaseComponent
-export * from './basecomponent/BaseComponent.vue';
-export { default as BaseComponent } from './basecomponent/BaseComponent.vue';
-export * from './basecomponent/style/BaseComponentStyle.js';
-export { default as BaseComponentStyle } from './basecomponent/style/BaseComponentStyle.js';
+export * from '../../core/src/basecomponent/BaseComponent.vue';
+export { default as BaseComponent } from '../../core/src/basecomponent/BaseComponent.vue';
+export * from '../../core/src/basecomponent/style/BaseComponentStyle.js';
+export { default as BaseComponentStyle } from '../../core/src/basecomponent/style/BaseComponentStyle.js';
 
 // BaseDirective
 export * from './basedirective/BaseDirective.js';
@@ -651,8 +651,8 @@ export * from './selectbutton/style/SelectButtonStyle.js';
 export { default as SelectButtonStyle } from './selectbutton/style/SelectButtonStyle.js';
 
 // PrimeVueService
-export * from './service/PrimeVueService.js';
-export { default as PrimeVueService } from './service/PrimeVueService.js';
+export * from '../../core/src/service/PrimeVueService.js';
+export { default as PrimeVueService } from '../../core/src/service/PrimeVueService.js';
 
 // Sidebar
 export * from './sidebar/Sidebar.vue';

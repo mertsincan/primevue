@@ -1,4 +1,4 @@
-import BaseStyle from 'primevue/base/style';
+import BaseStyle from '@primevue/core/base/style';
 
 const theme = ({ dt }) => `
 .p-megamenu {
@@ -12,7 +12,7 @@ const theme = ({ dt }) => `
     gap: ${dt('megamenu.gap')};
 }
 
-.p-megamenu-start, 
+.p-megamenu-start,
 .p-megamenu-end {
     display: flex;
     align-items: center;

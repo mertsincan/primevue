@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import Select from 'primevue/select';
 
 export default {

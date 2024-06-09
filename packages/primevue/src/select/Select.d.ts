@@ -8,7 +8,7 @@
  *
  */
 import { TransitionProps, VNode } from 'vue';
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { IconFieldPassThroughOptions } from '../iconfield';
 import { InputIconPassThroughOptions } from '../inputicon';
 import { InputTextPassThroughOptions } from '../inputtext';

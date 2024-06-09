@@ -7,7 +7,7 @@
  * @module row
  *
  */
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { DefineComponent, EmitFn, GlobalComponentConstructor, PassThrough } from '../ts-helpers';
 
 export declare type RowPassThroughOptionType<T = any> = RowPassThroughAttributes | ((options: RowPassThroughMethodOptions<T>) => RowPassThroughAttributes | string) | string | null | undefined;

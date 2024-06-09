@@ -26,11 +26,11 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import SortAltIcon from '@primevue/icons/sortalt';
 import SortAmountDownIcon from '@primevue/icons/sortamountdown';
 import SortAmountUpAltIcon from '@primevue/icons/sortamountupalt';
 import Badge from 'primevue/badge';
-import BaseComponent from 'primevue/basecomponent';
 import { DomHandler, ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 

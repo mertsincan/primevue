@@ -52,9 +52,9 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
 import ChevronUpIcon from '@primevue/icons/chevronup';
-import BaseComponent from 'primevue/basecomponent';
 import { DomHandler } from 'primevue/utils';
 
 export default {

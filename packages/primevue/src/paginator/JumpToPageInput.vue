@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import InputNumber from 'primevue/inputnumber';
 
 export default {

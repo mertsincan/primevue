@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import BaseIcon from 'primevue/baseicon';
+import BaseIcon from '@primevue/icons/baseicon';
 
 export default {
     name: 'InfoCircleIcon',

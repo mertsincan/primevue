@@ -8,7 +8,7 @@
  *
  */
 import { VNode } from 'vue';
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { DropdownPassThroughOptions } from '../dropdown';
 import { InputNumberPassThroughOptions } from '../inputnumber';
 import { PassThroughOptions } from '../passthrough';

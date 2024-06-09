@@ -1,5 +1,5 @@
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import TabPanelStyle from 'primevue/tabpanel/style';
 
 export default {

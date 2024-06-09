@@ -1,4 +1,4 @@
-import BaseStyle from 'primevue/base/style';
+import BaseStyle from '@primevue/core/base/style';
 
 const theme = ({ dt }) => `
 .p-togglebutton {
@@ -16,7 +16,7 @@ const theme = ({ dt }) => `
     font-size: 1rem;
     font-family: inherit;
     font-feature-settings: inherit;
-    transition: background ${dt('togglebutton.transition.duration')}, color ${dt('togglebutton.transition.duration')}, border-color ${dt('togglebutton.transition.duration')}, 
+    transition: background ${dt('togglebutton.transition.duration')}, color ${dt('togglebutton.transition.duration')}, border-color ${dt('togglebutton.transition.duration')},
         outline-color ${dt('togglebutton.transition.duration')}, box-shadow ${dt('togglebutton.transition.duration')};
     border-radius: ${dt('togglebutton.border.radius')};
     outline-color: transparent;
@@ -40,7 +40,7 @@ const theme = ({ dt }) => `
 .p-togglebutton::before {
     content: "";
     background: transparent;
-    transition: background ${dt('togglebutton.transition.duration')}, color ${dt('togglebutton.transition.duration')}, border-color ${dt('togglebutton.transition.duration')}, 
+    transition: background ${dt('togglebutton.transition.duration')}, color ${dt('togglebutton.transition.duration')}, border-color ${dt('togglebutton.transition.duration')},
             outline-color ${dt('togglebutton.transition.duration')}, box-shadow ${dt('togglebutton.transition.duration')};
     position: absolute;
     left: ${dt('togglebutton.content.left')};

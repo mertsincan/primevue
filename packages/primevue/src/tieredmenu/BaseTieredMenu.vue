@@ -1,5 +1,5 @@
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import TieredMenuStyle from 'primevue/tieredmenu/style';
 
 export default {

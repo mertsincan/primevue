@@ -9,8 +9,8 @@
  *
  */
 import { VNode } from 'vue';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { BadgePassThroughOptions } from '../badge';
-import { ComponentHooks } from '../basecomponent';
 import { ButtonPassThroughOptions } from '../button';
 import { CheckboxPassThroughOptionType } from '../checkbox';
 import { DataTablePassThroughOptions } from '../datatable';

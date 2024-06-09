@@ -7,7 +7,7 @@
  * @module toggleswitch
  *
  */
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { PassThroughOptions } from '../passthrough';
 import { DefineComponent, DesignToken, EmitFn, GlobalComponentConstructor, PassThrough } from '../ts-helpers';
 

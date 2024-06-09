@@ -17,9 +17,10 @@
         "baseUrl": ".",
         "paths": {
             "primevue/*": ["./src/*"],
+            "@primevue/core/*": ["../../packages/core/src/*"],
             "@primevue/icons/*": ["../../packages/icons/src/*"]
         }
     },
-    "include": ["**/*.ts", "../icons/src/index.d.ts", "src/*", "../themes/src/themes"],
+    "include": ["**/*.ts", "src/*"],
     "exclude": ["node_modules", "dist"]
 }

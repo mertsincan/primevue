@@ -8,7 +8,7 @@
  *
  */
 import { TransitionProps } from 'vue';
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { PassThroughOptions } from '../passthrough';
 import { DefineComponent, DesignToken, EmitFn, GlobalComponentConstructor, HintedString, PassThrough } from '../ts-helpers';
 

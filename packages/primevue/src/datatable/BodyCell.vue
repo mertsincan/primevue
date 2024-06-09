@@ -127,13 +127,13 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import BarsIcon from '@primevue/icons/bars';
 import CheckIcon from '@primevue/icons/check';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
 import ChevronRightIcon from '@primevue/icons/chevronright';
 import PencilIcon from '@primevue/icons/pencil';
 import TimesIcon from '@primevue/icons/times';
-import BaseComponent from 'primevue/basecomponent';
 import Button from 'primevue/button';
 import OverlayEventBus from 'primevue/overlayeventbus';
 import Ripple from 'primevue/ripple';

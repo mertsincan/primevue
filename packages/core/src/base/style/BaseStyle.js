@@ -1,6 +1,6 @@
+import { useStyle } from '@primevue/core/usestyle';
+import { ObjectUtils } from '@primevue/core/utils';
 import { Theme, dt } from '@primevue/themes';
-import { useStyle } from 'primevue/usestyle';
-import { ObjectUtils } from 'primevue/utils';
 
 const theme = ({ dt }) => `
 * {

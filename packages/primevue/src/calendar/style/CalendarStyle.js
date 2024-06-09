@@ -1,4 +1,4 @@
-import BaseStyle from 'primevue/base/style';
+import BaseStyle from '@primevue/core/base/style';
 
 export default BaseStyle.extend({
     name: 'calendar'

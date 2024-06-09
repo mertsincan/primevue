@@ -164,12 +164,12 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import FilterIcon from '@primevue/icons/filter';
 import FilterSlashIcon from '@primevue/icons/filterslash';
 import PlusIcon from '@primevue/icons/plus';
 import TrashIcon from '@primevue/icons/trash';
 import { FilterOperator } from 'primevue/api';
-import BaseComponent from 'primevue/basecomponent';
 import Button from 'primevue/button';
 import FocusTrap from 'primevue/focustrap';
 import OverlayEventBus from 'primevue/overlayeventbus';

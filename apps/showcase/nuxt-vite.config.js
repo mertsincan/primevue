@@ -18,7 +18,7 @@ const STYLE_ALIAS = {
     'primevue/avatargroup/style': path.resolve(__dirname, './components/lib/avatargroup/style/AvatarGroupStyle.js'),
     'primevue/badge/style': path.resolve(__dirname, './components/lib/badge/style/BadgeStyle.js'),
     'primevue/badgedirective/style': path.resolve(__dirname, './components/lib/badgedirective/style/BadgeDirectiveStyle.js'),
-    'primevue/baseicon/style': path.resolve(__dirname, './components/lib/baseicon/style/BaseIconStyle.js'),
+    '@primevue/icons/baseicon/style': path.resolve(__dirname, './components/lib/baseicon/style/BaseIconStyle.js'),
     'primevue/blockui/style': path.resolve(__dirname, './components/lib/blockui/style/BlockUIStyle.js'),
     'primevue/breadcrumb/style': path.resolve(__dirname, './components/lib/breadcrumb/style/BreadcrumbStyle.js'),
     'primevue/button/style': path.resolve(__dirname, './components/lib/button/style/ButtonStyle.js'),
@@ -135,7 +135,7 @@ const STYLE_ALIAS = {
 };
 
 const ICON_ALIAS = {
-    'primevue/baseicon': path.resolve(__dirname, './components/lib/baseicon/BaseIcon.vue'),
+    '@primevue/icons/baseicon': path.resolve(__dirname, './components/lib/baseicon/BaseIcon.vue'),
     'primevue/icons/angledoubledown': path.resolve(__dirname, './components/lib/icons/angledoubledown/index.vue'),
     'primevue/icons/angledoubleleft': path.resolve(__dirname, './components/lib/icons/angledoubleleft/index.vue'),
     'primevue/icons/angledoubleright': path.resolve(__dirname, './components/lib/icons/angledoubleright/index.vue'),
@@ -228,7 +228,8 @@ export default {
             disabled: true
         },
         alias: {
-            primevue: 'primevue/src',
+            primevue: path.resolve(__dirname, '../../packages/primevue/src'),
+            '@primevue/core': path.resolve(__dirname, '../../packages/core/src'),
             '@primevue/themes': path.resolve(__dirname, '../../packages/themes/src'),
             '@primevue/icons': path.resolve(__dirname, '../../packages/icons/src')
 

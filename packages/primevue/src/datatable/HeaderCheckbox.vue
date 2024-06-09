@@ -8,8 +8,8 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import CheckIcon from '@primevue/icons/check';
-import BaseComponent from 'primevue/basecomponent';
 import Checkbox from 'primevue/checkbox';
 import { mergeProps } from 'vue';
 

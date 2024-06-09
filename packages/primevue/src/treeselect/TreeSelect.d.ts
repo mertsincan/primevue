@@ -8,7 +8,7 @@
  *
  */
 import { InputHTMLAttributes, TransitionProps, VNode } from 'vue';
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { ChipPassThroughOptions } from '../chip';
 import { PassThroughOptions } from '../passthrough';
 import { TreeExpandedKeys, TreePassThroughOptions } from '../tree';

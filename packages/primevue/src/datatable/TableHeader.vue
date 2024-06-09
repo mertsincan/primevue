@@ -132,7 +132,7 @@
 </template>
 
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import { HelperSet, ObjectUtils } from 'primevue/utils';
 import { mergeProps } from 'vue';
 import ColumnFilter from './ColumnFilter.vue';

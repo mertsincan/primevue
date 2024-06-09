@@ -1,5 +1,5 @@
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import ConfirmPopupStyle from 'primevue/confirmpopup/style';
 
 export default {

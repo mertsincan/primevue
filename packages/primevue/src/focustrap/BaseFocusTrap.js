@@ -1,4 +1,4 @@
-import BaseDirective from 'primevue/basedirective';
+import BaseDirective from '@primevue/core/basedirective';
 import FocusTrapStyle from 'primevue/focustrap/style';
 
 const BaseFocusTrap = BaseDirective.extend({

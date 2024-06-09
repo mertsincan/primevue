@@ -20,12 +20,12 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import CheckIcon from '@primevue/icons/check';
 import ExclamationTriangleIcon from '@primevue/icons/exclamationtriangle';
 import InfoCircleIcon from '@primevue/icons/infocircle';
 import TimesIcon from '@primevue/icons/times';
 import TimesCircleIcon from '@primevue/icons/timescircle';
-import BaseComponent from 'primevue/basecomponent';
 import Ripple from 'primevue/ripple';
 
 export default {

@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import { DomHandler, ObjectUtils, UniqueComponentId } from 'primevue/utils';
 import BodyRow from './BodyRow.vue';
 

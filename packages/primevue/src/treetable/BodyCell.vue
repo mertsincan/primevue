@@ -39,12 +39,12 @@
 </template>
 
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import CheckIcon from '@primevue/icons/check';
 import ChevronDownIcon from '@primevue/icons/chevrondown';
 import ChevronRightIcon from '@primevue/icons/chevronright';
 import MinusIcon from '@primevue/icons/minus';
 import SpinnerIcon from '@primevue/icons/spinner';
-import BaseComponent from 'primevue/basecomponent';
 import Checkbox from 'primevue/checkbox';
 import Ripple from 'primevue/ripple';
 import { DomHandler, ObjectUtils } from 'primevue/utils';

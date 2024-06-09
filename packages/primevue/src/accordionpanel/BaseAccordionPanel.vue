@@ -1,6 +1,6 @@
 <script>
+import BaseComponent from '@primevue/core/basecomponent';
 import AccordionPanelStyle from 'primevue/accordionpanel/style';
-import BaseComponent from 'primevue/basecomponent';
 
 export default {
     name: 'BaseAccordionPanel',

@@ -1,4 +1,4 @@
-import BaseStyle from 'primevue/base/style';
+import BaseStyle from '@primevue/core/base/style';
 
 const theme = ({ dt }) => `
 .p-accordionpanel {
@@ -47,7 +47,7 @@ const theme = ({ dt }) => `
 
 .p-accordionheader-toggle-icon {
     color: ${dt('accordion.header.toggle.icon.color')};
-} 
+}
 
 .p-accordionpanel:not(.p-disabled) .p-accordionheader:focus-visible {
     box-shadow: ${dt('accordion.header.focus.ring.shadow')};

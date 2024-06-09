@@ -8,7 +8,7 @@
  *
  */
 import { TransitionProps, VNode } from 'vue';
-import { ComponentHooks } from '../basecomponent';
+import { ComponentHooks } from '../../../core/src/basecomponent';
 import { ButtonPassThroughOptions } from '../button';
 import { ListboxPassThroughOptions } from '../listbox';
 import { PassThroughOptions } from '../passthrough';

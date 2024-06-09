@@ -1,5 +1,5 @@
 <script>
-import BaseComponent from 'primevue/basecomponent';
+import BaseComponent from '@primevue/core/basecomponent';
 import ConfirmDialogStyle from 'primevue/confirmdialog/style';
 
 export default {

@@ -1,4 +1,4 @@
-import BaseStyle from 'primevue/base/style';
+import BaseStyle from '@primevue/core/base/style';
 
 const theme = ({ dt }) => `
 .p-datatable {
@@ -163,7 +163,7 @@ const theme = ({ dt }) => `
     color: ${dt('datatable.filter.constraint.color')};
     border-radius: ${dt('datatable.filter.constraint.border.radius')};
     cursor: pointer;
-    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')}, 
+    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')},
         box-shadow ${dt('datatable.transition.duration')};
 }
 
@@ -296,7 +296,7 @@ const theme = ({ dt }) => `
     color: ${dt('datatable.header.cell.color')};
     font-weight: normal;
     text-align: left;
-    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')}, 
+    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')},
             outline-color ${dt('datatable.transition.duration')}, box-shadow ${dt('datatable.transition.duration')};
 }
 
@@ -308,7 +308,7 @@ const theme = ({ dt }) => `
     outline-color: transparent;
     background: ${dt('datatable.row.background')};
     color: ${dt('datatable.row.color')};
-    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')}, 
+    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')},
             outline-color ${dt('datatable.transition.duration')}, box-shadow ${dt('datatable.transition.duration')};
 }
 
@@ -552,7 +552,7 @@ p-datatable-gridlines .p-datatable-tbody > tr:last-child > td {
     background: transparent;
     cursor: pointer;
     border-radius: ${dt('datatable.row.toggle.button.border.radius')};
-    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')}, 
+    transition: background ${dt('datatable.transition.duration')}, color ${dt('datatable.transition.duration')}, border-color ${dt('datatable.transition.duration')},
             outline-color ${dt('datatable.transition.duration')}, box-shadow ${dt('datatable.transition.duration')};
     outline-color: transparent;
     user-select: none;
