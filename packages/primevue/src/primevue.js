@@ -35,7 +35,7 @@ export * from './animateonscroll/style/AnimateOnScrollStyle.js';
 export { default as AnimateOnScrollStyle } from './animateonscroll/style/AnimateOnScrollStyle.js';
 
 // Api
-export * from '../../core/src/api/Api.js';
+export * from '@primevue/core/api';
 
 // AutoComplete
 export * from './autocomplete/AutoComplete.vue';
@@ -68,26 +68,26 @@ export * from './badgedirective/style/BadgeDirectiveStyle.js';
 export { default as BadgeDirectiveStyle } from './badgedirective/style/BadgeDirectiveStyle.js';
 
 // Base
-export * from './base/Base.js';
-export { default as Base } from './base/Base.js';
-export * from './base/style/BaseStyle.js';
-export { default as BaseStyle } from './base/style/BaseStyle.js';
+export * from '@primevue/core/base';
+export { default as Base } from '@primevue/core/base';
+export * from '@primevue/core/base/style';
+export { default as BaseStyle } from '@primevue/core/base/style';
 
 // BaseComponent
-export * from '../../core/src/basecomponent/BaseComponent.vue';
-export { default as BaseComponent } from '../../core/src/basecomponent/BaseComponent.vue';
-export * from '../../core/src/basecomponent/style/BaseComponentStyle.js';
-export { default as BaseComponentStyle } from '../../core/src/basecomponent/style/BaseComponentStyle.js';
+export * from '@primevue/core/basecomponent';
+export { default as BaseComponent } from '@primevue/core/basecomponent';
+export * from '@primevue/core/basecomponent/style';
+export { default as BaseComponentStyle } from '@primevue/core/basecomponent/style';
 
 // BaseDirective
-export * from './basedirective/BaseDirective.js';
-export { default as BaseDirective } from './basedirective/BaseDirective.js';
+export * from '@primevue/core/basedirective';
+export { default as BaseDirective } from '@primevue/core/basedirective';
 
 // BaseIcon
-export * from './baseicon/BaseIcon.vue';
-export { default as BaseIcon } from './baseicon/BaseIcon.vue';
-export * from './baseicon/style/BaseIconStyle.js';
-export { default as BaseIconStyle } from './baseicon/style/BaseIconStyle.js';
+export * from '@primevue/icons/baseicon';
+export { default as BaseIcon } from '@primevue/icons/baseicon';
+export * from '@primevue/icons/baseicon/style';
+export { default as BaseIconStyle } from '@primevue/icons/baseicon/style';
 
 // BlockUI
 export * from './blockui/BlockUI.vue';
@@ -180,8 +180,8 @@ export * from './columngroup/style/ColumnGroupStyle.js';
 export { default as ColumnGroupStyle } from './columngroup/style/ColumnGroupStyle.js';
 
 // Config
-export * from '../../core/src/config/PrimeVue.js';
-export { default as Config } from '../../core/src/config/PrimeVue.js';
+export * from '@primevue/core/config';
+export { default as Config } from '@primevue/core/config';
 
 // ConfirmationEventBus
 export * from './confirmationeventbus/ConfirmationEventBus.js';
@@ -306,96 +306,6 @@ export * from './iconfield/IconField.vue';
 export { default as IconField } from './iconfield/IconField.vue';
 export * from './iconfield/style/IconFieldStyle.js';
 export { default as IconFieldStyle } from './iconfield/style/IconFieldStyle.js';
-
-// Icons
-export * from './icons/angledoubledown/index.vue';
-export { default as AngleDoubleDownIcon } from './icons/angledoubledown/index.vue';
-export * from './icons/angledoubleleft/index.vue';
-export { default as AngleDoubleLeftIcon } from './icons/angledoubleleft/index.vue';
-export * from './icons/angledoubleright/index.vue';
-export { default as AngleDoubleRightIcon } from './icons/angledoubleright/index.vue';
-export * from './icons/angledoubleup/index.vue';
-export { default as AngleDoubleUpIcon } from './icons/angledoubleup/index.vue';
-export * from './icons/angledown/index.vue';
-export { default as AngleDownIcon } from './icons/angledown/index.vue';
-export * from './icons/angleleft/index.vue';
-export { default as AngleLeftIcon } from './icons/angleleft/index.vue';
-export * from './icons/angleright/index.vue';
-export { default as AngleRightIcon } from './icons/angleright/index.vue';
-export * from './icons/angleup/index.vue';
-export { default as AngleUpIcon } from './icons/angleup/index.vue';
-export * from './icons/ban/index.vue';
-export { default as BanIcon } from './icons/ban/index.vue';
-export * from './icons/bars/index.vue';
-export { default as BarsIcon } from './icons/bars/index.vue';
-export * from './icons/blank/index.vue';
-export { default as BlankIcon } from './icons/blank/index.vue';
-export * from './icons/calendar/index.vue';
-export { default as CalendarIcon } from './icons/calendar/index.vue';
-export * from './icons/check/index.vue';
-export { default as CheckIcon } from './icons/check/index.vue';
-export * from './icons/chevrondown/index.vue';
-export { default as ChevronDownIcon } from './icons/chevrondown/index.vue';
-export * from './icons/chevronleft/index.vue';
-export { default as ChevronLeftIcon } from './icons/chevronleft/index.vue';
-export * from './icons/chevronright/index.vue';
-export { default as ChevronRightIcon } from './icons/chevronright/index.vue';
-export * from './icons/chevronup/index.vue';
-export { default as ChevronUpIcon } from './icons/chevronup/index.vue';
-export * from './icons/exclamationtriangle/index.vue';
-export { default as ExclamationTriangleIcon } from './icons/exclamationtriangle/index.vue';
-export * from './icons/eye/index.vue';
-export { default as EyeIcon } from './icons/eye/index.vue';
-export * from './icons/eyeslash/index.vue';
-export { default as EyeSlashIcon } from './icons/eyeslash/index.vue';
-export * from './icons/filter/index.vue';
-export { default as FilterIcon } from './icons/filter/index.vue';
-export * from './icons/filterslash/index.vue';
-export { default as FilterSlashIcon } from './icons/filterslash/index.vue';
-export * from './icons/infocircle/index.vue';
-export { default as InfoCircleIcon } from './icons/infocircle/index.vue';
-export * from './icons/minus/index.vue';
-export { default as MinusIcon } from './icons/minus/index.vue';
-export * from './icons/pencil/index.vue';
-export { default as PencilIcon } from './icons/pencil/index.vue';
-export * from './icons/plus/index.vue';
-export { default as PlusIcon } from './icons/plus/index.vue';
-export * from './icons/refresh/index.vue';
-export { default as RefreshIcon } from './icons/refresh/index.vue';
-export * from './icons/search/index.vue';
-export { default as SearchIcon } from './icons/search/index.vue';
-export * from './icons/searchminus/index.vue';
-export { default as SearchMinusIcon } from './icons/searchminus/index.vue';
-export * from './icons/searchplus/index.vue';
-export { default as SearchPlusIcon } from './icons/searchplus/index.vue';
-export * from './icons/sortalt/index.vue';
-export { default as SortAltIcon } from './icons/sortalt/index.vue';
-export * from './icons/sortamountdown/index.vue';
-export { default as SortAmountDownIcon } from './icons/sortamountdown/index.vue';
-export * from './icons/sortamountupalt/index.vue';
-export { default as SortAmountUpAltIcon } from './icons/sortamountupalt/index.vue';
-export * from './icons/spinner/index.vue';
-export { default as SpinnerIcon } from './icons/spinner/index.vue';
-export * from './icons/star/index.vue';
-export { default as StarIcon } from './icons/star/index.vue';
-export * from './icons/starfill/index.vue';
-export { default as StarFillIcon } from './icons/starfill/index.vue';
-export * from './icons/thlarge/index.vue';
-export { default as ThLargeIcon } from './icons/thlarge/index.vue';
-export * from './icons/times/index.vue';
-export { default as TimesIcon } from './icons/times/index.vue';
-export * from './icons/timescircle/index.vue';
-export { default as TimesCircleIcon } from './icons/timescircle/index.vue';
-export * from './icons/trash/index.vue';
-export { default as TrashIcon } from './icons/trash/index.vue';
-export * from './icons/undo/index.vue';
-export { default as UndoIcon } from './icons/undo/index.vue';
-export * from './icons/upload/index.vue';
-export { default as UploadIcon } from './icons/upload/index.vue';
-export * from './icons/windowmaximize/index.vue';
-export { default as WindowMaximizeIcon } from './icons/windowmaximize/index.vue';
-export * from './icons/windowminimize/index.vue';
-export { default as WindowMinimizeIcon } from './icons/windowminimize/index.vue';
 
 // Image
 export * from './image/Image.vue';
@@ -651,8 +561,8 @@ export * from './selectbutton/style/SelectButtonStyle.js';
 export { default as SelectButtonStyle } from './selectbutton/style/SelectButtonStyle.js';
 
 // PrimeVueService
-export * from '../../core/src/service/PrimeVueService.js';
-export { default as PrimeVueService } from '../../core/src/service/PrimeVueService.js';
+export * from '@primevue/core/service';
+export { default as PrimeVueService } from '@primevue/core/service';
 
 // Sidebar
 export * from './sidebar/Sidebar.vue';
@@ -874,4 +784,4 @@ export * from './virtualscroller/style/VirtualScrollerStyle.js';
 export { default as VirtualScrollerStyle } from './virtualscroller/style/VirtualScrollerStyle.js';
 
 // Themes
-export * from '../../themes/src/themes/index.js';
+export * from '@primevue/themes';

@@ -1,5 +1,5 @@
-import { toVariables } from '../helpers';
-import { SharedUtils } from '../utils';
+import { toVariables } from '../helpers/index.js';
+import SharedUtils from './sharedUtils';
 
 export default {
     regex: {

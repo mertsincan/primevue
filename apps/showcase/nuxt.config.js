@@ -1,4 +1,4 @@
-import aliasConfig from './nuxt-vite.config.js';
+import path from 'path';
 
 const baseUrl = '/';
 
@@ -13,9 +13,32 @@ export default defineNuxtConfig({
             prefetch: false
         }
     ],
-    vite: aliasConfig,
+    vite: {
+        resolve: {
+            optimizeDeps: {
+                disabled: true
+            },
+            alias: {
+                primevue: path.resolve(__dirname, '../../packages/primevue/src'),
+                '@primevue/core': path.resolve(__dirname, '../../packages/core/src'),
+                '@primevue/themes/aura': path.resolve(__dirname, '../../packages/themes/src/presets/aura'),
+                '@primevue/themes/lara': path.resolve(__dirname, '../../packages/themes/src/presets/lara'),
+                '@primevue/themes/nora': path.resolve(__dirname, '../../packages/themes/src/presets/nora'),
+                '@primevue/themes': path.resolve(__dirname, '../../packages/themes/src'),
+                '@primevue/icons': path.resolve(__dirname, '../../packages/icons/src')
+            }
+        }
+    },
     nitro: {
-        alias: aliasConfig.resolve.alias
+        alias: {
+            primevue: path.resolve(__dirname, '../../packages/primevue/src'),
+            '@primevue/core': path.resolve(__dirname, '../../packages/core/src'),
+            '@primevue/themes/aura': path.resolve(__dirname, '../../packages/themes/src/presets/aura'),
+            '@primevue/themes/lara': path.resolve(__dirname, '../../packages/themes/src/presets/lara'),
+            '@primevue/themes/nora': path.resolve(__dirname, '../../packages/themes/src/presets/nora'),
+            '@primevue/themes': path.resolve(__dirname, '../../packages/themes/src'),
+            '@primevue/icons': path.resolve(__dirname, '../../packages/icons/src')
+        }
     },
     routeRules: {
         '/accessibility': { redirect: { to: '/guides/accessibility', statusCode: 301 } },

@@ -11,4 +11,3 @@ import UniqueComponentId from './UniqueComponentId';
 import ZIndexUtils from './ZIndexUtils';
 
 export { ConnectedOverlayScrollHandler, DomHandler, EventBus, HelperSet, ObjectUtils, UniqueComponentId, ZIndexUtils };
-

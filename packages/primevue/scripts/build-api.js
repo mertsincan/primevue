@@ -1,9 +1,9 @@
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
 const rootDir = path.resolve(__dirname, '../');
-const distDir = path.resolve(rootDir, 'dist');
-const componentPath = path.join(__dirname, './components');
+const distDir = path.resolve(rootDir, process.env.OUTPUT_DIR);
+const componentPath = path.resolve(rootDir, process.env.INPUT_DIR);
 
 // Import project `package.json`
 const pkg = require(path.resolve(rootDir, 'package.json'));
@@ -21,7 +21,9 @@ const files = fs.readdirSync(componentPath);
 files.forEach((file) => {
     const { name } = path.parse(file);
 
-    fileModules[name] = require(`./components//${name}`);
+    try {
+        fileModules[name] = require(`./components/${name}`);
+    } catch {}
 });
 
 const webTypes = {

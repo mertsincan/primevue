@@ -1,5 +1,5 @@
-import ThemeService from '../service';
-import { ThemeUtils } from '../utils';
+import ThemeService from '../service/index.js';
+import { ThemeUtils } from '../utils/index.js';
 
 export default {
     defaults: {

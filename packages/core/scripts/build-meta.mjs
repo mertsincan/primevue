@@ -1,5 +1,8 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs from 'fs-extra';
+import path from 'path';
+import { resolvePath } from '../../../scripts/build-core.mjs';
+
+const { __dirname, __workspace, INPUT_DIR, OUTPUT_DIR } = resolvePath(import.meta.url);
 
 function copyDependencies(inFolder, outFolder, subFolder) {
     fs.readdirSync(inFolder, { withFileTypes: true }).forEach((entry) => {
@@ -10,7 +13,7 @@ function copyDependencies(inFolder, outFolder, subFolder) {
         if (entry.isDirectory()) {
             copyDependencies(sourcePath, destPath, subFolder);
         } else {
-            if (fileName === 'package.json' || fileName.endsWith('d.ts') || fileName.endsWith('.vue')) {
+            if (fileName.endsWith('d.ts') || fileName.endsWith('.vue')) {
                 if (subFolder && sourcePath.includes(subFolder)) {
                     const subDestPath = path.join(outFolder, fileName.replace(subFolder, ''));
 
@@ -25,11 +28,7 @@ function copyDependencies(inFolder, outFolder, subFolder) {
     });
 }
 
-copyDependencies('./components/lib/', 'dist/', '/style');
-copyDependencies('./components/lib/icons/', 'dist/icons/');
-copyDependencies('./components/lib/passthrough/', 'dist/passthrough/');
-copyDependencies('./components/lib/themes/', 'dist/themes/');
+copyDependencies(INPUT_DIR, OUTPUT_DIR, '/style');
 
-fs.copySync(path.resolve(__dirname, './components/lib/ts-helpers.d.ts'), 'dist/ts-helpers.d.ts');
-fs.copySync(path.resolve(__dirname, './README.md'), 'dist/README.md');
-fs.copySync(path.resolve(__dirname, './LICENSE.md'), 'dist/LICENSE.md');
+fs.copySync(path.resolve(__dirname, '../README.md'), `${OUTPUT_DIR}/README.md`);
+fs.copySync(path.resolve(__workspace, './LICENSE.md'), `${OUTPUT_DIR}/LICENSE.md`);

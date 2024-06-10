@@ -1,11 +1,16 @@
 import alias from '@rollup/plugin-alias';
 import { babel } from '@rollup/plugin-babel';
+import resolve from '@rollup/plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import vue from 'rollup-plugin-vue';
 
 import fs from 'fs-extra';
-import path from 'path';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// @todo - Remove
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // globals
 const GLOBALS = {
@@ -13,13 +18,32 @@ const GLOBALS = {
 };
 
 // externals
-const GLOBAL_EXTERNALS = ['vue', 'chart.js/auto', 'quill'];
-const INLINE_EXTERNALS = [/@primevue\/core\/.*/, /@primevue\/icons\/.*/];
+const GLOBAL_EXTERNALS = ['vue'];
+const INLINE_EXTERNALS = [/@primevue\/themes\/.*/];
 const EXTERNALS = [...GLOBAL_EXTERNALS, ...INLINE_EXTERNALS];
 
 // alias
-//@todo
-const ALIAS_ENTRIES = []; //Object.entries(viteConfig.resolve.alias).map(([key, value]) => ({ find: key, replacement: value }));
+const ALIAS_ENTRIES = [
+    {
+        find: /^primevue\/core\/(.*)$/,
+        replacement: path.resolve(__dirname, './src/$1'),
+        customResolver(source, importer) {
+            const basedir = path.dirname(importer);
+            const folderPath = path.resolve(basedir, source);
+            const folderName = path.basename(folderPath);
+
+            const fName = folderName === 'style' ? `${path.basename(path.dirname(folderPath))}Style` : folderName;
+            const files = fs.readdirSync(folderPath);
+            const targetFile = files.find((file) => {
+                const ext = path.extname(file);
+                return ['.vue', '.js'].includes(ext) && path.basename(file, ext).toLowerCase() === fName.toLowerCase();
+            });
+
+            return targetFile ? path.join(folderPath, targetFile) : null;
+        }
+    },
+    { find: '@primevue/themes', replacement: path.resolve(__dirname, '../themes/src/index.js') }
+];
 
 // plugins
 const BABEL_PLUGIN_OPTIONS = {
@@ -82,6 +106,8 @@ const ENTRY = {
                 ]
             });
 
+            ENTRY.update.packageJson({ input, output, options: { main: `${output}.cjs` } });
+
             return ENTRY.format;
         },
         es({ input, output, minify }) {
@@ -101,13 +127,15 @@ const ENTRY = {
                 ]
             });
 
+            ENTRY.update.packageJson({ input, output, options: { main: `${output}.mjs`, module: `${output}.mjs` } });
+
             return ENTRY.format;
         },
         umd({ name, input, output, minify }) {
             ENTRY.entries.push({
                 onwarn: ENTRY.onwarn,
                 input,
-                plugins: [alias(ALIAS_PLUGIN_OPTIONS), ...PLUGINS, minify && terser(TERSER_PLUGIN_OPTIONS)],
+                plugins: [alias(ALIAS_PLUGIN_OPTIONS), resolve(), ...PLUGINS, minify && terser(TERSER_PLUGIN_OPTIONS)],
                 external: GLOBAL_EXTERNALS,
                 inlineDynamicImports: true,
                 output: [
@@ -122,6 +150,24 @@ const ENTRY = {
             });
 
             return ENTRY.format;
+        }
+    },
+    update: {
+        packageJson({ input, output, options }) {
+            try {
+                const inputDir = path.resolve(__dirname, path.dirname(input));
+                const outputDir = path.resolve(__dirname, path.dirname(output));
+                const packageJson = path.resolve(outputDir, 'package.json');
+
+                !fs.existsSync(packageJson) && fs.copySync(path.resolve(inputDir, './package.json'), packageJson);
+
+                const pkg = JSON.parse(fs.readFileSync(packageJson, { encoding: 'utf8', flag: 'r' }));
+
+                !pkg?.main?.includes('.cjs') && (pkg.main = path.basename(options?.main) ?? pkg.main);
+                pkg.module = path.basename(options?.module) ?? packageJson.module;
+
+                fs.writeFileSync(packageJson, JSON.stringify(pkg, null, 4));
+            } catch {}
         }
     }
 };
@@ -161,22 +207,22 @@ function addStyle() {
         });
 }
 
-function addCore() {
-    ENTRY.format.es({ input: process.env.INPUT_DIR + 'config/PrimeVue.js', output: process.env.OUTPUT_DIR + 'config/config' });
+function addPackageJson() {
+    try {
+        const outputDir = path.resolve(__dirname, process.env.OUTPUT_DIR);
+        const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, './package.json'), { encoding: 'utf8', flag: 'r' }));
+
+        delete pkg.scripts;
+        delete pkg.devDependencies;
+        delete pkg.publishConfig;
+
+        !fs.existsSync(outputDir) && fs.mkdirSync(outputDir);
+        fs.writeFileSync(path.resolve(outputDir, 'package.json'), JSON.stringify(pkg, null, 4));
+    } catch {}
 }
 
-function addPassThrough() {
-    ENTRY.format.es({ input: process.env.INPUT_DIR + 'passthrough/index.js', output: process.env.OUTPUT_DIR + 'passthrough/index' });
-}
-
-function addLibrary() {
-    ENTRY.format.umd({ name: 'PrimeVue', input: process.env.INPUT_DIR + 'primevue.js', output: process.env.OUTPUT_DIR + 'umd/primevue', minify: true });
-}
-
-addCore();
-addStyle();
 addFile();
-addPassThrough();
-addLibrary();
+addStyle();
+addPackageJson();
 
 export default ENTRY.entries;

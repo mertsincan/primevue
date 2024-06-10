@@ -57,6 +57,15 @@
         "vitest": "^1.6.0"
     },
     "publishConfig": {
+        "main": "./dist/module.cjs",
+        "types": "./dist/types.d.ts",
+        "exports": {
+            ".": {
+                "types": "./dist/types.d.ts",
+                "import": "./dist/module.mjs",
+                "require": "./dist/module.cjs"
+            }
+        },
         "access": "public"
     }
 }

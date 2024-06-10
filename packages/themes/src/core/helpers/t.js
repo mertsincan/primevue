@@ -1,5 +1,5 @@
-import Theme from '../config';
-import { SharedUtils } from '../utils';
+import Theme from '../config/index.js';
+import { SharedUtils } from '../utils/index.js';
 
 export const $t = (theme = {}) => {
     let { preset: _preset, options: _options } = theme;
