@@ -1,9 +1,9 @@
 <script>
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 
 export default {
     name: 'BaseInput',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         size: {
             type: String,

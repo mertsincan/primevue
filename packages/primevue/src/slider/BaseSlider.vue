@@ -1,10 +1,10 @@
 <script>
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 import SliderStyle from 'primevue/slider/style';
 
 export default {
     name: 'BaseSlider',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         min: {
             type: Number,

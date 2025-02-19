@@ -1,10 +1,10 @@
 <script>
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 import ToggleButtonStyle from 'primevue/togglebutton/style';
 
 export default {
     name: 'BaseToggleButton',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         onIcon: String,
         offIcon: String,

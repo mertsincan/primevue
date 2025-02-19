@@ -1,10 +1,10 @@
 <script>
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 import ColorPickerStyle from 'primevue/colorpicker/style';
 
 export default {
     name: 'BaseColorPicker',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         defaultColor: {
             type: null,

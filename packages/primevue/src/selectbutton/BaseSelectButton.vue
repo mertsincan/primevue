@@ -1,10 +1,10 @@
 <script>
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 import SelectButtonStyle from 'primevue/selectbutton/style';
 
 export default {
     name: 'BaseSelectButton',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         options: Array,
         optionLabel: null,

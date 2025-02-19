@@ -2,10 +2,10 @@
  *
  * [Live Demo](https://primevue.org/)
  *
- * @module baseeditableholder
+ * @module baseeditableholder2
  *
  */
-export interface BaseEditableHolderProps {
+export interface BaseEditableHolder2Props {
     /**
      * Value of the component.
      */
@@ -34,7 +34,7 @@ export interface BaseEditableHolderProps {
     formControl?: Record<string, any> | undefined;
 }
 
-export interface BaseEditableHolderEmitsOptions {
+export interface BaseEditableHolder2EmitsOptions {
     /**
      * Emitted when the value changes in controlled mode.
      * @param {*} value - New value.

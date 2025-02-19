@@ -12,8 +12,8 @@ export { default as BaseComponentStyle } from '@primevue/core/basecomponent/styl
 // BaseDirective
 export { default as BaseDirective } from '@primevue/core/basedirective';
 
-// BaseEditableHolder
-export { default as BaseEditableHolder } from '@primevue/core/baseeditableholder';
+// BaseEditableHolder2
+export { default as BaseEditableHolder2 } from '@primevue/core/baseeditableholder2';
 
 // BaseInput
 export { default as BaseInput } from '@primevue/core/baseinput';

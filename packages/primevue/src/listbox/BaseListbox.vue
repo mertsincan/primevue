@@ -1,10 +1,10 @@
 <script>
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 import ListboxStyle from 'primevue/listbox/style';
 
 export default {
     name: 'BaseListbox',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         options: Array,
         optionLabel: null,

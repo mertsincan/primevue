@@ -1,11 +1,11 @@
 <script>
 import { $dt } from '@primeuix/styled';
-import BaseEditableHolder from '@primevue/core/baseeditableholder';
+import BaseEditableHolder2 from '@primevue/core/baseeditableholder2';
 import KnobStyle from 'primevue/knob/style';
 
 export default {
     name: 'BaseKnob',
-    extends: BaseEditableHolder,
+    extends: BaseEditableHolder2,
     props: {
         size: {
             type: Number,

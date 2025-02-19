@@ -3,7 +3,7 @@ import { isNotEmpty } from '@primeuix/utils';
 import BaseComponent from '@primevue/core/basecomponent';
 
 export default {
-    name: 'BaseEditableHolder',
+    name: 'BaseEditableHolder2',
     extends: BaseComponent,
     emits: ['update:modelValue', 'value-change'],
     props: {

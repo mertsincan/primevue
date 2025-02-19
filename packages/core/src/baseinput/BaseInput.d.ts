@@ -5,9 +5,9 @@
  * @module baseinput
  *
  */
-import { BaseEditableHolderEmitsOptions, BaseEditableHolderProps } from '@primevue/core/baseeditableholder';
+import { BaseEditableHolder2EmitsOptions, BaseEditableHolder2Props } from '@primevue/core/baseeditableholder2';
 
-export interface BaseInputProps extends BaseEditableHolderProps {
+export interface BaseInputProps extends BaseEditableHolder2Props {
     /**
      * Defines the size of the component.
      */
@@ -23,4 +23,4 @@ export interface BaseInputProps extends BaseEditableHolderProps {
     variant?: 'outlined' | 'filled' | undefined;
 }
 
-export interface BaseInputEmitsOptions extends BaseEditableHolderEmitsOptions {}
+export interface BaseInputEmitsOptions extends BaseEditableHolder2EmitsOptions {}

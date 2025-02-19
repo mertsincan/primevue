@@ -23,7 +23,7 @@
         "./basecomponent/style": "./src/basecomponent/style/BaseComponentStyle.js",
         "./basecomponent": "./src/basecomponent/BaseComponent.vue",
         "./basedirective": "./src/basedirective/BaseDirective.js",
-        "./baseeditableholder": "./src/baseeditableholder/BaseEditableHolder.vue",
+        "./baseeditableholder2": "./src/baseeditableholder2/BaseEditableHolder2.vue",
         "./baseinput": "./src/baseinput/BaseInput.vue",
         "./config": "./src/config/PrimeVue.js",
         "./service": "./src/service/PrimeVueService.js",
