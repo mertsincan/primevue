@@ -19,7 +19,7 @@ export default {
             if (!document.startViewTransition) {
                 this.toggleDarkMode(event);
 
-                return;
+                return null;
             }
 
             document.startViewTransition(() => this.toggleDarkMode(event));
